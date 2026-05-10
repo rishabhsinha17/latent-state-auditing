@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+runs/
+*.zip
+.venv/
+.venv-*/
+*.egg-info/
+dist/
+build/
+
+# LaTeX / Overleaf sync artifacts (optional local builds)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.synctex.gz

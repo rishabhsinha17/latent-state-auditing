@@ -1,0 +1,35 @@
+[project]
+name = "latent-agent-auditing"
+version = "0.1.0"
+description = "Latent-state auditing scaffold for tool-using language agent security evals."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Latent Agent Auditing Contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+ml = [
+  "accelerate>=0.34",
+  "huggingface_hub>=0.34,<1",
+  "numpy>=1.26",
+  "pyyaml>=6.0",
+  "safetensors>=0.4",
+  "torch>=2.2",
+  "transformers>=4.45,<5",
+]
+nla = []
+
+[project.scripts]
+latent-audit-demo = "latent_agent_auditing.experiments.run_injecagent_latent_audit:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["latent_agent_auditing*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
