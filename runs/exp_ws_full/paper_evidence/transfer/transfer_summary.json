@@ -1,0 +1,22 @@
+{
+  "experiments": [],
+  "output_dir": "runs/exp_ws_full/paper_evidence/transfer",
+  "run_dir": "runs/exp_ws_full",
+  "summary": {
+    "hybrid": {
+      "max_auroc": null,
+      "mean_auroc": null,
+      "min_auroc": null
+    },
+    "raw_activation_probe": {
+      "max_auroc": null,
+      "mean_auroc": null,
+      "min_auroc": null
+    },
+    "trained_nla_text": {
+      "max_auroc": null,
+      "mean_auroc": null,
+      "min_auroc": null
+    }
+  }
+}

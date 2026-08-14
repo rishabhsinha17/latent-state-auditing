@@ -1,0 +1,29 @@
+{
+  "cases": 200,
+  "complementarity_tool_vs_latent": {
+    "caught_by_both": 0,
+    "caught_by_existing_only": 0,
+    "caught_by_latent_only": 97,
+    "missed_by_both": 63
+  },
+  "mean_positive_lead_time": null,
+  "nla_text": {
+    "accuracy_at_50": 0.595,
+    "auprc": 0.8134784314615454,
+    "auroc": 0.5746875,
+    "fpr_at_90_tpr": 1.0
+  },
+  "positive_cases": 160,
+  "tool_policy": {
+    "accuracy_at_50": 0.2,
+    "auprc": 0.736842123824112,
+    "auroc": 0.5,
+    "fpr_at_90_tpr": 1.0
+  },
+  "transcript": {
+    "accuracy_at_50": 0.2,
+    "auprc": 0.736842123824112,
+    "auroc": 0.5,
+    "fpr_at_90_tpr": 1.0
+  }
+}

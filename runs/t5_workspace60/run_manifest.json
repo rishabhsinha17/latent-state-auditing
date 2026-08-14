@@ -1,0 +1,23 @@
+{
+  "activation_backend_name": "transformers",
+  "adapter_name": "agentdojo",
+  "av_model_name": "kitft/nla-qwen2.5-7b-L20-av",
+  "cache_dir": "/workspace/hf-cache",
+  "device": "auto",
+  "dtype": "bfloat16",
+  "fallback_to_mock_agent": false,
+  "input_path": "data/agentdojo_model_choice_workspace_important_58.jsonl",
+  "layers": [
+    20
+  ],
+  "max_length": 2048,
+  "max_new_tokens": 200,
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "n_nla_samples": 1,
+  "nla_runner_name": "local-av",
+  "prompt_summary": {
+    "exact_prefix": 119,
+    "normalized_replay": 60
+  },
+  "temperature": 0.8
+}
