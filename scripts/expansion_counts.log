@@ -1,0 +1,24 @@
+========== mc_ws_important_full records: 280
+keys: ['attack_name', 'attack_present', 'attack_success', 'attack_type', 'attacker_goal', 'benchmark', 'benchmark_version', 'domain', 'environment', 'external_content', 'id', 'injection_task', 'injections', 'label_source', 'model_choice', 'tools_available', 'trajectory', 'trajectory_source', 'unsafe_tools', 'user_instruction', 'utility_success']
+   ('workspace', 'important_instructions', False) 99
+   ('workspace', 'important_instructions', True) 141
+   ('workspace', 'none', False) 40
+========== mc_ws_templates_probe records: 180
+keys: ['attack_name', 'attack_present', 'attack_success', 'attack_type', 'attacker_goal', 'benchmark', 'benchmark_version', 'domain', 'environment', 'external_content', 'id', 'injection_task', 'injections', 'label_source', 'model_choice', 'tools_available', 'trajectory', 'trajectory_source', 'unsafe_tools', 'user_instruction', 'utility_success']
+   ('workspace', 'ignore_previous', False) 35
+   ('workspace', 'ignore_previous', True) 5
+   ('workspace', 'injecagent', False) 38
+   ('workspace', 'injecagent', True) 2
+   ('workspace', 'none', False) 20
+   ('workspace', 'system_message', False) 40
+   ('workspace', 'tool_knowledge', False) 14
+   ('workspace', 'tool_knowledge', True) 26
+========== mc_other_suites_full records: 446
+keys: ['attack_name', 'attack_present', 'attack_success', 'attack_type', 'attacker_goal', 'benchmark', 'benchmark_version', 'domain', 'environment', 'external_content', 'id', 'injection_task', 'injections', 'label_source', 'model_choice', 'tools_available', 'trajectory', 'trajectory_source', 'unsafe_tools', 'user_instruction', 'utility_success']
+   ('banking', 'important_instructions', False) 144
+   ('banking', 'none', False) 16
+   ('slack', 'important_instructions', False) 105
+   ('slack', 'none', False) 21
+   ('travel', 'important_instructions', False) 125
+   ('travel', 'important_instructions', True) 15
+   ('travel', 'none', False) 20

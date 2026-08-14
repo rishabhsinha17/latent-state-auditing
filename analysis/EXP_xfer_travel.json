@@ -1,0 +1,32 @@
+{
+  "monitors": {
+    "centroid_max": {
+      "auroc": 0.837,
+      "lower": 0.745,
+      "n": 140,
+      "upper": 0.918
+    },
+    "logreg_max": {
+      "auroc": 0.684,
+      "lower": 0.625,
+      "n": 140,
+      "upper": 0.742
+    },
+    "nla_text": {
+      "auroc": 0.702,
+      "lower": 0.556,
+      "n": 140,
+      "upper": 0.835
+    },
+    "transcript": {
+      "auroc": 0.372,
+      "lower": 0.261,
+      "n": 140,
+      "upper": 0.495
+    }
+  },
+  "test_n": 140,
+  "test_run": "../pod-harvest/lsa/runs/exp_travel",
+  "test_unsafe": 15,
+  "train_run": "../pod-harvest/lsa/runs/exp_ws_full"
+}

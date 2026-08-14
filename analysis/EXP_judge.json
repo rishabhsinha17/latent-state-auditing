@@ -1,0 +1,65 @@
+{
+  "primary_ws_full": {
+    "commitment_attacked": {
+      "auroc": 0.615,
+      "lower": 0.563,
+      "n": 240,
+      "upper": 0.668
+    },
+    "commitment_attacked_via_exposure_score": {
+      "auroc": 0.586,
+      "lower": 0.54,
+      "n": 240,
+      "upper": 0.635
+    },
+    "exposure_among_safe": {
+      "auroc": 0.985,
+      "lower": 0.966,
+      "n": 139,
+      "upper": 1.0
+    },
+    "n": 280
+  },
+  "templates": {
+    "commitment_attacked": {
+      "auroc": 0.442,
+      "lower": 0.374,
+      "n": 160,
+      "upper": 0.516
+    },
+    "commitment_attacked_via_exposure_score": {
+      "auroc": 0.529,
+      "lower": 0.451,
+      "n": 160,
+      "upper": 0.607
+    },
+    "exposure_among_safe": {
+      "auroc": 0.969,
+      "lower": 0.946,
+      "n": 147,
+      "upper": 0.988
+    },
+    "n": 180
+  },
+  "travel": {
+    "commitment_attacked": {
+      "auroc": 0.641,
+      "lower": 0.509,
+      "n": 140,
+      "upper": 0.76
+    },
+    "commitment_attacked_via_exposure_score": {
+      "auroc": 0.656,
+      "lower": 0.52,
+      "n": 140,
+      "upper": 0.777
+    },
+    "exposure_among_safe": {
+      "auroc": 1.0,
+      "lower": 1.0,
+      "n": 145,
+      "upper": 1.0
+    },
+    "n": 160
+  }
+}

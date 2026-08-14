@@ -1,0 +1,126 @@
+{
+  "cluster_bootstrap": {
+    "centroid": {
+      "auroc": 0.763,
+      "cluster_lower": 0.687,
+      "cluster_upper": 0.831
+    },
+    "logreg": {
+      "auroc": 0.853,
+      "cluster_lower": 0.767,
+      "cluster_upper": 0.92
+    },
+    "transcript_nb": {
+      "auroc": 0.793,
+      "cluster_lower": 0.712,
+      "cluster_upper": 0.857
+    }
+  },
+  "grouped_seed_stats": {
+    "centroid_range": [
+      0.739,
+      0.754
+    ],
+    "logreg_range": [
+      0.78,
+      0.806
+    ],
+    "paired_diff_centroid_minus_text": [
+      0.042,
+      0.11
+    ],
+    "paired_diff_logreg_minus_text": [
+      0.079,
+      0.164
+    ],
+    "transcript_range": [
+      0.638,
+      0.712
+    ]
+  },
+  "n_attacked": 240,
+  "n_unsafe": 141,
+  "per_step_commitment": {
+    "pre_action_both": {
+      "centroid": {
+        "auroc": 0.763,
+        "lower": 0.691,
+        "n": 240,
+        "upper": 0.819
+      },
+      "logreg": {
+        "auroc": 0.853,
+        "lower": 0.799,
+        "n": 240,
+        "upper": 0.897
+      }
+    },
+    "t_minus_1_step2": {
+      "centroid": {
+        "auroc": 0.756,
+        "lower": 0.683,
+        "n": 240,
+        "upper": 0.812
+      },
+      "logreg": {
+        "auroc": 0.871,
+        "lower": 0.821,
+        "n": 240,
+        "upper": 0.917
+      }
+    },
+    "t_minus_2_step1": {
+      "centroid": {
+        "auroc": 0.764,
+        "lower": 0.699,
+        "n": 240,
+        "upper": 0.824
+      },
+      "logreg": {
+        "auroc": 0.878,
+        "lower": 0.833,
+        "n": 240,
+        "upper": 0.921
+      }
+    }
+  },
+  "tfidf_exposure_among_safe": {
+    "auroc": 0.79,
+    "lower": 0.673,
+    "n": 139,
+    "upper": 0.89
+  },
+  "tfidf_grouped_mean": 0.78,
+  "tfidf_grouped_per_seed": {
+    "0": 0.771,
+    "1": 0.82,
+    "13": 0.785,
+    "2": 0.743
+  },
+  "tfidf_on_nla_text_commitment": {
+    "auroc": 0.518,
+    "lower": 0.444,
+    "n": 240,
+    "upper": 0.594
+  },
+  "tfidf_stratified": {
+    "auroc": 0.855,
+    "lower": 0.803,
+    "n": 240,
+    "upper": 0.901
+  },
+  "tfidf_transfer": {
+    "templates": {
+      "auroc": 0.794,
+      "lower": 0.695,
+      "n": 160,
+      "upper": 0.878
+    },
+    "travel": {
+      "auroc": 0.717,
+      "lower": 0.579,
+      "n": 140,
+      "upper": 0.841
+    }
+  }
+}

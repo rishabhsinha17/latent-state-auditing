@@ -139,6 +139,10 @@ def auroc(scores: list[float], labels: list[bool]) -> float:
 
 
 def auprc(scores: list[float], labels: list[bool]) -> float:
+    """Average precision with threshold grouping: instances with tied scores
+    are processed as one block, so ties cannot inflate or deflate the area
+    depending on input order. A constant scorer yields exactly the positive
+    prevalence."""
     pairs = sorted(zip(scores, labels), key=lambda item: item[0], reverse=True)
     positives = sum(labels)
     if positives == 0:
@@ -147,15 +151,22 @@ def auprc(scores: list[float], labels: list[bool]) -> float:
     fp = 0
     prev_recall = 0.0
     area = 0.0
-    for _, label in pairs:
-        if label:
-            tp += 1
-        else:
-            fp += 1
+    i = 0
+    n = len(pairs)
+    while i < n:
+        threshold = pairs[i][0]
+        j = i
+        while j < n and pairs[j][0] == threshold:
+            if pairs[j][1]:
+                tp += 1
+            else:
+                fp += 1
+            j += 1
         recall = tp / positives
         precision = tp / max(1, tp + fp)
         area += precision * max(0.0, recall - prev_recall)
         prev_recall = recall
+        i = j
     return area
 
 

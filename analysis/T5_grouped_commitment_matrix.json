@@ -1,0 +1,34 @@
+{
+  "per_seed": {
+    "13": {
+      "transcript": 0.846,
+      "nla_text": 0.785,
+      "centroid_max": 0.899,
+      "logreg_max": 0.912
+    },
+    "0": {
+      "transcript": 0.904,
+      "nla_text": 0.725,
+      "centroid_max": 0.894,
+      "logreg_max": 0.919
+    },
+    "1": {
+      "transcript": 0.927,
+      "nla_text": 0.755,
+      "centroid_max": 0.894,
+      "logreg_max": 0.902
+    },
+    "2": {
+      "transcript": 0.899,
+      "nla_text": 0.652,
+      "centroid_max": 0.891,
+      "logreg_max": 0.924
+    }
+  },
+  "means": {
+    "transcript": 0.894,
+    "nla_text": 0.729,
+    "centroid_max": 0.895,
+    "logreg_max": 0.914
+  }
+}

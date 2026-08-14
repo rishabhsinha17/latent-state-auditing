@@ -1,0 +1,132 @@
+{
+  "pre_action_grouped_seed13": {
+    "nla_text": {
+      "auroc": 0.823,
+      "lower": 0.682,
+      "upper": 0.937,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.907,
+      "lower": 0.771,
+      "upper": 1.0,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.937,
+      "lower": 0.853,
+      "upper": 0.993,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.937,
+      "lower": 0.851,
+      "upper": 0.992,
+      "n": 40
+    }
+  },
+  "pre_action_grouped_seed0": {
+    "nla_text": {
+      "auroc": 0.763,
+      "lower": 0.588,
+      "upper": 0.905,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.917,
+      "lower": 0.8,
+      "upper": 1.0,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.942,
+      "lower": 0.86,
+      "upper": 0.997,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.939,
+      "lower": 0.855,
+      "upper": 0.992,
+      "n": 40
+    }
+  },
+  "pre_action_grouped_seed1": {
+    "nla_text": {
+      "auroc": 0.785,
+      "lower": 0.621,
+      "upper": 0.925,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.896,
+      "lower": 0.765,
+      "upper": 0.992,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.937,
+      "lower": 0.847,
+      "upper": 0.995,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.942,
+      "lower": 0.856,
+      "upper": 0.995,
+      "n": 40
+    }
+  },
+  "pre_action_grouped_seed2": {
+    "nla_text": {
+      "auroc": 0.891,
+      "lower": 0.776,
+      "upper": 0.973,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.904,
+      "lower": 0.775,
+      "upper": 0.994,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.917,
+      "lower": 0.815,
+      "upper": 0.989,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.902,
+      "lower": 0.786,
+      "upper": 0.979,
+      "n": 40
+    }
+  },
+  "step3_grouped_control": {
+    "nla_text": {
+      "auroc": 0.977,
+      "lower": 0.919,
+      "upper": 1.0,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 1.0,
+      "lower": 1.0,
+      "upper": 1.0,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 1.0,
+      "lower": 1.0,
+      "upper": 1.0,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 1.0,
+      "lower": 1.0,
+      "upper": 1.0,
+      "n": 40
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "monitors": {
+    "centroid_max": {
+      "auroc": 0.756,
+      "lower": 0.651,
+      "n": 160,
+      "upper": 0.848
+    },
+    "logreg_max": {
+      "auroc": 0.572,
+      "lower": 0.469,
+      "n": 160,
+      "upper": 0.678
+    },
+    "nla_text": {
+      "auroc": 0.688,
+      "lower": 0.575,
+      "n": 160,
+      "upper": 0.796
+    },
+    "transcript": {
+      "auroc": 0.599,
+      "lower": 0.488,
+      "n": 160,
+      "upper": 0.696
+    }
+  },
+  "test_n": 160,
+  "test_run": "../pod-harvest/lsa/runs/exp_ws_templates",
+  "test_unsafe": 33,
+  "train_run": "../pod-harvest/lsa/runs/exp_ws_full"
+}

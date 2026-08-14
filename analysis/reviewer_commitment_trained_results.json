@@ -1,0 +1,226 @@
+{
+  "pre_action_seed13": {
+    "nla_text": {
+      "auroc": 0.846,
+      "lower": 0.706,
+      "upper": 0.957,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.889,
+      "lower": 0.75,
+      "upper": 0.99,
+      "n": 40
+    },
+    "centroid_mean": {
+      "auroc": 0.871,
+      "lower": 0.735,
+      "upper": 0.977,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.927,
+      "lower": 0.833,
+      "upper": 0.992,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.929,
+      "lower": 0.835,
+      "upper": 0.992,
+      "n": 40
+    }
+  },
+  "step1_only": {
+    "nla_text": {
+      "auroc": 0.876,
+      "lower": 0.742,
+      "upper": 0.98,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.816,
+      "lower": 0.639,
+      "upper": 0.953,
+      "n": 40
+    },
+    "centroid_mean": {
+      "auroc": 0.816,
+      "lower": 0.639,
+      "upper": 0.953,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.889,
+      "lower": 0.765,
+      "upper": 0.982,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.889,
+      "lower": 0.765,
+      "upper": 0.982,
+      "n": 40
+    }
+  },
+  "step2_only": {
+    "nla_text": {
+      "auroc": 0.389,
+      "lower": 0.193,
+      "upper": 0.578,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.889,
+      "lower": 0.769,
+      "upper": 0.979,
+      "n": 40
+    },
+    "centroid_mean": {
+      "auroc": 0.889,
+      "lower": 0.769,
+      "upper": 0.979,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.914,
+      "lower": 0.808,
+      "upper": 0.987,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.914,
+      "lower": 0.808,
+      "upper": 0.987,
+      "n": 40
+    }
+  },
+  "step3_control": {
+    "nla_text": {
+      "auroc": 0.982,
+      "lower": 0.939,
+      "upper": 1.0,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.995,
+      "lower": 0.975,
+      "upper": 1.0,
+      "n": 40
+    },
+    "centroid_mean": {
+      "auroc": 0.995,
+      "lower": 0.975,
+      "upper": 1.0,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.997,
+      "lower": 0.985,
+      "upper": 1.0,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.997,
+      "lower": 0.985,
+      "upper": 1.0,
+      "n": 40
+    }
+  },
+  "pre_action_seed0": {
+    "nla_text": {
+      "auroc": 0.841,
+      "lower": 0.705,
+      "upper": 0.944,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.881,
+      "lower": 0.757,
+      "upper": 0.977,
+      "n": 40
+    },
+    "centroid_mean": {
+      "auroc": 0.886,
+      "lower": 0.77,
+      "upper": 0.978,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.927,
+      "lower": 0.83,
+      "upper": 0.995,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.927,
+      "lower": 0.83,
+      "upper": 0.992,
+      "n": 40
+    }
+  },
+  "pre_action_seed1": {
+    "nla_text": {
+      "auroc": 0.79,
+      "lower": 0.634,
+      "upper": 0.917,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.866,
+      "lower": 0.723,
+      "upper": 0.975,
+      "n": 40
+    },
+    "centroid_mean": {
+      "auroc": 0.841,
+      "lower": 0.699,
+      "upper": 0.957,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.859,
+      "lower": 0.723,
+      "upper": 0.964,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.871,
+      "lower": 0.74,
+      "upper": 0.969,
+      "n": 40
+    }
+  },
+  "pre_action_seed2": {
+    "nla_text": {
+      "auroc": 0.871,
+      "lower": 0.749,
+      "upper": 0.97,
+      "n": 40
+    },
+    "centroid_max": {
+      "auroc": 0.886,
+      "lower": 0.758,
+      "upper": 0.98,
+      "n": 40
+    },
+    "centroid_mean": {
+      "auroc": 0.891,
+      "lower": 0.769,
+      "upper": 0.98,
+      "n": 40
+    },
+    "logreg_max": {
+      "auroc": 0.909,
+      "lower": 0.803,
+      "upper": 0.984,
+      "n": 40
+    },
+    "logreg_mean": {
+      "auroc": 0.902,
+      "lower": 0.79,
+      "upper": 0.979,
+      "n": 40
+    }
+  }
+}

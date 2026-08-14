@@ -1,0 +1,63 @@
+{
+  "grouped_means": {
+    "centroid_max": 0.747,
+    "logreg_max": 0.795,
+    "nla_text": 0.565,
+    "transcript": 0.673
+  },
+  "grouped_per_seed": {
+    "0": {
+      "centroid_max": 0.739,
+      "logreg_max": 0.806,
+      "nla_text": 0.59,
+      "transcript": 0.659
+    },
+    "1": {
+      "centroid_max": 0.748,
+      "logreg_max": 0.78,
+      "nla_text": 0.546,
+      "transcript": 0.685
+    },
+    "13": {
+      "centroid_max": 0.754,
+      "logreg_max": 0.791,
+      "nla_text": 0.565,
+      "transcript": 0.712
+    },
+    "2": {
+      "centroid_max": 0.748,
+      "logreg_max": 0.802,
+      "nla_text": 0.56,
+      "transcript": 0.638
+    }
+  },
+  "n_attacked": 240,
+  "n_unsafe": 141,
+  "run_dir": "../pod-harvest/lsa/runs/exp_ws_full",
+  "stratified_seed13": {
+    "centroid_max": {
+      "auroc": 0.763,
+      "lower": 0.691,
+      "n": 240,
+      "upper": 0.819
+    },
+    "logreg_max": {
+      "auroc": 0.853,
+      "lower": 0.799,
+      "n": 240,
+      "upper": 0.897
+    },
+    "nla_text": {
+      "auroc": 0.57,
+      "lower": 0.5,
+      "n": 240,
+      "upper": 0.644
+    },
+    "transcript": {
+      "auroc": 0.793,
+      "lower": 0.737,
+      "n": 240,
+      "upper": 0.85
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "resamples": 1000,
+  "seed": 13,
+  "source": "/private/tmp/claude-502/-Users-a12345-open-source-contribution/f810495d-d719-48ed-af10-368e0cdfdb63/scratchpad/t4_transfer/transfer_experiments.jsonl",
+  "splits": {
+    "attack_holdout:ignore_previous": {
+      "hybrid": {
+        "auroc": 1.0,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "raw_activation_probe": {
+        "auroc": 1.0,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "trained_nla_text": {
+        "auroc": 1.0,
+        "lower": 1.0,
+        "upper": 1.0
+      }
+    },
+    "attack_holdout:system_message": {
+      "hybrid": {
+        "auroc": 0.9959375,
+        "lower": 0.9848053181386515,
+        "upper": 1.0
+      },
+      "raw_activation_probe": {
+        "auroc": 0.9953125,
+        "lower": 0.983125,
+        "upper": 1.0
+      },
+      "trained_nla_text": {
+        "auroc": 0.9990625,
+        "lower": 0.99625,
+        "upper": 1.0
+      }
+    },
+    "domain_holdout:slack": {
+      "hybrid": {
+        "auroc": 0.99375,
+        "lower": 0.9776785714285714,
+        "upper": 1.0
+      },
+      "raw_activation_probe": {
+        "auroc": 1.0,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "trained_nla_text": {
+        "auroc": 0.926875,
+        "lower": 0.8415178571428571,
+        "upper": 0.989010989010989
+      }
+    },
+    "domain_holdout:workspace": {
+      "hybrid": {
+        "auroc": 1.0,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "raw_activation_probe": {
+        "auroc": 1.0,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "trained_nla_text": {
+        "auroc": 0.97,
+        "lower": 0.9044289044289044,
+        "upper": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "folds": 5,
+  "resamples": 1000,
+  "run_dir": "../pod-harvest/lsa/runs/t3_replay200",
+  "seed": 13,
+  "variants": {
+    "both_provenances_paper": {
+      "raw_activation_probe": {
+        "auroc": 0.999375,
+        "lower": 0.9975672388160562,
+        "upper": 1.0
+      },
+      "trained_nla_text": {
+        "auroc": 0.929453125,
+        "lower": 0.8737597448618002,
+        "upper": 0.9786538728966764
+      }
+    },
+    "exact_prefix_only_step2": {
+      "raw_activation_probe": {
+        "auroc": 1.0,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "trained_nla_text": {
+        "auroc": 0.96171875,
+        "lower": 0.9224683544303798,
+        "upper": 0.9892941389947378
+      }
+    },
+    "normalized_replay_only_step1": {
+      "raw_activation_probe": {
+        "auroc": 0.999375,
+        "lower": 0.9973337283365428,
+        "upper": 1.0
+      },
+      "trained_nla_text": {
+        "auroc": 0.96796875,
+        "lower": 0.931899641577061,
+        "upper": 0.9940308406566075
+      }
+    }
+  }
+}
