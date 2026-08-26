@@ -1,0 +1,69 @@
+{
+  "grouped_means": {
+    "centroid_max": 0.747,
+    "logreg_max": 0.795,
+    "nla_text": 0.64,
+    "transcript": 0.673
+  },
+  "grouped_per_seed": {
+    "0": {
+      "centroid_max": 0.739,
+      "logreg_max": 0.806,
+      "nla_text": 0.656,
+      "transcript": 0.659
+    },
+    "1": {
+      "centroid_max": 0.748,
+      "logreg_max": 0.78,
+      "nla_text": 0.63,
+      "transcript": 0.685
+    },
+    "13": {
+      "centroid_max": 0.754,
+      "logreg_max": 0.791,
+      "nla_text": 0.677,
+      "transcript": 0.712
+    },
+    "2": {
+      "centroid_max": 0.748,
+      "logreg_max": 0.802,
+      "nla_text": 0.597,
+      "transcript": 0.638
+    }
+  },
+  "n_attacked": 240,
+  "n_unsafe": 141,
+  "run_dir": "../../pod-harvest/lsa/runs/nla_multisample",
+  "stratified_seed13": {
+    "centroid_max": {
+      "auroc": 0.763,
+      "lower": 0.691,
+      "n": 240,
+      "upper": 0.819
+    },
+    "logreg_max": {
+      "auroc": 0.853,
+      "lower": 0.799,
+      "n": 240,
+      "upper": 0.897
+    },
+    "nla_text": {
+      "auroc": 0.704,
+      "lower": 0.639,
+      "n": 240,
+      "upper": 0.771
+    },
+    "transcript": {
+      "auroc": 0.793,
+      "lower": 0.737,
+      "n": 240,
+      "upper": 0.85
+    }
+  },
+  "tfidf_on_nla_text_k3": {
+    "auroc": 0.683,
+    "lower": 0.621,
+    "n": 240,
+    "upper": 0.751
+  }
+}

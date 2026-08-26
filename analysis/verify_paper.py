@@ -216,11 +216,23 @@ prose_expect = {
          gmeans["transcript"]]),
 }
 rr = json.load(open(HERE / "EXP_reviewer_response.json"))
+nm = json.load(open(HERE / "NLA_MULTISAMPLE_commitment.json"))
 prose_expect["central nla collapse"] = (
-    r"loses the commitment signal almost entirely \(naive Bayes ([\d.]+) \[([\d.]+), ([\d.]+)\]; TF-IDF ([\d.]+) \[([\d.]+), ([\d.]+)\]\) although the signal remains available both in its source activations \(([\d.]+)\) and, under matched classifiers, in the visible context \(([\d.]+) and ([\d.]+)\)",
+    r"loses the commitment signal almost entirely under single-sample verbalization \(naive Bayes ([\d.]+) \[([\d.]+), ([\d.]+)\]; TF-IDF ([\d.]+) \[([\d.]+), ([\d.]+)\]; a released three-sample rerun recovers part of it, ([\d.]+) and ([\d.]+), Appendix~\\ref\{app:negative\}\) although the signal remains available both in its source activations \(([\d.]+)\) and, under matched classifiers, in the visible context \(([\d.]+) and ([\d.]+)\)",
     [strat13["nla_text"]["auroc"], strat13["nla_text"]["lower"], strat13["nla_text"]["upper"],
      rr["tfidf_on_nla_text_commitment"]["auroc"], rr["tfidf_on_nla_text_commitment"]["lower"], rr["tfidf_on_nla_text_commitment"]["upper"],
+     nm["stratified_seed13"]["nla_text"]["auroc"], nm["tfidf_on_nla_text_k3"]["auroc"],
      strat13["logreg_max"]["auroc"], strat13["transcript"]["auroc"], rr["tfidf_stratified"]["auroc"]])
+k3 = nm["stratified_seed13"]["nla_text"]
+k3frag = (f"naive Bayes {k3['auroc']:.3f} [{k3['lower']:.3f}, {k3['upper']:.3f}] "
+          f"({nm['grouped_means']['nla_text']:.3f} grouped), TF-IDF {nm['tfidf_on_nla_text_k3']['auroc']:.3f} "
+          f"[{nm['tfidf_on_nla_text_k3']['lower']:.3f}, {nm['tfidf_on_nla_text_k3']['upper']:.3f}]")
+if k3frag not in TEX:
+    BAD.append(f"three-sample NLA fragment missing: '{k3frag}'")
+# sanity: multi-sample rerun must reproduce the non-NLA monitors exactly
+for mon in ("logreg_max", "centroid_max", "transcript"):
+    if abs(nm["stratified_seed13"][mon]["auroc"] - strat13[mon]["auroc"]) > 0.0015:
+        BAD.append(f"multi-sample rerun failed to reproduce {mon}")
 prose_expect["central tfidf sentence"] = (
     r"TF-IDF logistic text baseline ([\d.]+) \[([\d.]+), ([\d.]+)\] \(([\d.]+) grouped; per-seed ([\d.]+)--([\d.]+) versus the logistic probe's ([\d.]+)--([\d.]+)\)",
     [rr["tfidf_stratified"]["auroc"], rr["tfidf_stratified"]["lower"], rr["tfidf_stratified"]["upper"],
