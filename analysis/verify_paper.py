@@ -305,10 +305,33 @@ prose_expect["mistral mixed contrast"] = (
     r"carries pre-action commitment \(([\d.]+) \[([\d.]+), ([\d.]+)\]\) with \\emph\{inverted\} exposure ranking \(([\d.]+) \[([\d.]+), ([\d.]+)\]\)",
     [ms["pre_action_attacked_only"]["auroc"], ms["pre_action_attacked_only"]["lower"], ms["pre_action_attacked_only"]["upper"],
      ms["exposure_among_safe"]["auroc"], ms["exposure_among_safe"]["lower"], ms["exposure_among_safe"]["upper"]])
-if "0.896 on Mistral-7B, where the naive contrast instead learns commitment with \\emph{inverted} exposure ranking" not in TEX:
-    BAD.append("abstract Mistral clause missing or mismatched")
+if "0.896 on Mistral-7B and 0.912 on OLMo-2-7B, whose naive contrasts learn different things" not in TEX:
+    BAD.append("abstract Mistral/OLMo clause missing or mismatched")
 if "(logistic AUROC 0.853, matched by a trained TF-IDF text baseline at 0.855; 0.896 on Mistral-7B" not in TEX:
     BAD.append("abstract commitment fragment missing")
+
+# ---- Third model family (OLMo-2) vs THIRD_MODEL_*.json ----
+tc = json.load(open(HERE / "THIRD_MODEL_commitment.json"))
+ts = json.load(open(HERE / "THIRD_MODEL_stratified.json"))["monitors"]["raw_activation_probe"]
+tm = section("label{tab:third-model}", "\\end{table}")
+for disp, cell, grouped in (
+    ("exposure among safe", ts["exposure_among_safe"], None),
+    ("pre-action commitment", ts["pre_action_attacked_only"], None),
+    ("Logistic activation probe", tc["stratified_seed13"]["logreg_max"], tc["grouped_means"]["logreg_max"]),
+    ("Centroid activation probe", tc["stratified_seed13"]["centroid_max"], tc["grouped_means"]["centroid_max"]),
+    ("Visible-text naive Bayes", tc["stratified_seed13"]["transcript"], tc["grouped_means"]["transcript"]),
+    ("Visible-text TF-IDF logistic", tc["tfidf_stratified"], tc["tfidf_grouped_mean"]),
+):
+    tail = f" & {grouped:.3f}" if grouped is not None else " & ---"
+    frag = f"{cell['auroc']:.3f}\\ci{{{cell['lower']:.3f}}}{{{cell['upper']:.3f}}}{tail}"
+    if frag not in tm:
+        BAD.append(f"third-model row mismatch ({disp}): '{frag}'")
+prose_expect["third model recovery"] = (
+    r"OLMo-2-7B-Instruct, same grid: 480 attacked, (\d+) unsafe; Appendix~\\ref\{app:third-model\}\): commitment-contrast probes reach ([\d.]+) \[([\d.]+), ([\d.]+)\] \(([\d.]+) grouped; TF-IDF ([\d.]+), ([\d.]+) grouped\), while its naive contrast reads \\emph\{both\} axes \(exposure ([\d.]+), pre-action commitment ([\d.]+)\)",
+    [tc["n_unsafe"], tc["stratified_seed13"]["logreg_max"]["auroc"], tc["stratified_seed13"]["logreg_max"]["lower"],
+     tc["stratified_seed13"]["logreg_max"]["upper"], tc["grouped_means"]["logreg_max"],
+     tc["tfidf_stratified"]["auroc"], tc["tfidf_grouped_mean"],
+     ts["exposure_among_safe"]["auroc"], ts["pre_action_attacked_only"]["auroc"]])
 
 # ---- Export coverage / compliance table (Appendix) vs EXP_suite_counts.json ----
 sc = json.load(open(HERE / "EXP_suite_counts.json"))

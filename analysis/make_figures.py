@@ -21,6 +21,8 @@ rr = json.load(open(HERE / "EXP_reviewer_response.json"))
 judge = json.load(open(HERE / "EXP_judge.json"))["primary_ws_full"]
 ms = json.load(open(HERE / "MISTRAL_stratified.json"))["monitors"]["raw_activation_probe"]
 mc = json.load(open(HERE / "MISTRAL_commitment.json"))
+os_ = json.load(open(HERE / "THIRD_MODEL_stratified.json"))["monitors"]["raw_activation_probe"]
+oc = json.load(open(HERE / "THIRD_MODEL_commitment.json"))
 
 plt.rcParams.update({
     "font.size": 7.5, "axes.titlesize": 8, "axes.labelsize": 7.5,
@@ -55,8 +57,16 @@ def fig1():
              None,
              mc["stratified_seed13"]["logreg_max"]),
         ]),
+        ("OLMo-2-7B", [
+            ("unsafe vs.\nrest\n(naive mixed)",
+             os_["exposure_among_safe"],
+             os_["pre_action_attacked_only"]),
+            ("unsafe vs.\nattacked-safe\n(commitment)",
+             None,
+             oc["stratified_seed13"]["logreg_max"]),
+        ]),
     ]
-    fig, axes = plt.subplots(1, 2, figsize=(5.6, 1.95))
+    fig, axes = plt.subplots(1, 3, figsize=(8.1, 1.95))
     for ax, (model, rows) in zip(axes, panels):
         ax.set_xlim(0, 2); ax.set_ylim(0, 2)
         ax.set_xticks([0.5, 1.5])
@@ -80,9 +90,9 @@ def fig1():
                                                facecolor=cell_color(v["auroc"]), edgecolor="white"))
                     dark = abs(v["auroc"] - 0.5) > 0.28
                     ax.text(i + 0.5, y + 0.56, f"{v['auroc']:.3f}", ha="center", va="center",
-                            fontsize=9, fontweight="bold", color="white" if dark else "black")
+                            fontsize=10, fontweight="bold", color="white" if dark else "black")
                     ax.text(i + 0.5, y + 0.26, f"[{v['lower']:.3f}, {v['upper']:.3f}]",
-                            ha="center", va="center", fontsize=5.8,
+                            ha="center", va="center", fontsize=6.4,
                             color="white" if dark else "black")
     fig.text(0.5, 0.012,
              "Activation-probe AUROC by training contrast (rows) and evaluated axis (columns); red = below-chance (inverted) ranking.",
