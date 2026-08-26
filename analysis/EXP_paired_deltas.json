@@ -1,0 +1,116 @@
+{
+ "base_grouped_seed13": {
+  "centroid_max": 0.754,
+  "logreg_max": 0.791,
+  "nla_text": 0.565,
+  "tfidf": 0.785,
+  "transcript": 0.712
+ },
+ "base_stratified": {
+  "centroid_max": 0.763,
+  "logreg_max": 0.853,
+  "nla_text": 0.57,
+  "tfidf": 0.855,
+  "transcript": 0.793
+ },
+ "fpr_at_90tpr_stratified_oof": {
+  "centroid_max": 0.626,
+  "logreg_max": 0.343,
+  "nla_text": 0.838,
+  "tfidf": 0.394,
+  "transcript": 0.505
+ },
+ "paired_deltas_grouped_seed13": {
+  "centroid_minus_tfidf": {
+   "delta": -0.031,
+   "lower": -0.132,
+   "resamples": 1000,
+   "upper": 0.074
+  },
+  "logreg_minus_tfidf": {
+   "delta": 0.007,
+   "lower": -0.097,
+   "resamples": 1000,
+   "upper": 0.111
+  }
+ },
+ "paired_deltas_stratified": {
+  "centroid_minus_tfidf": {
+   "delta": -0.092,
+   "lower": -0.164,
+   "resamples": 1000,
+   "upper": -0.022
+  },
+  "logreg_minus_nb_visible": {
+   "delta": 0.059,
+   "lower": 0.003,
+   "resamples": 1000,
+   "upper": 0.114
+  },
+  "logreg_minus_tfidf": {
+   "delta": -0.003,
+   "lower": -0.054,
+   "resamples": 1000,
+   "upper": 0.05
+  },
+  "logreg_minus_tfidf_cluster": {
+   "delta": -0.003,
+   "lower": -0.085,
+   "resamples": 1000,
+   "upper": 0.07
+  }
+ },
+ "per_set_transfer_recomputed": {
+  "templates": {
+   "centroid_max": 0.756,
+   "logreg_max": 0.572,
+   "nla_text": 0.688,
+   "tfidf": 0.794,
+   "transcript": 0.599
+  },
+  "travel": {
+   "centroid_max": 0.837,
+   "logreg_max": 0.684,
+   "nla_text": 0.702,
+   "tfidf": 0.717,
+   "transcript": 0.372
+  }
+ },
+ "pooled_transfer_cluster_bootstrap": {
+  "centroid_max": {
+   "auroc": 0.724,
+   "lower": 0.657,
+   "n": 300,
+   "unsafe": 48,
+   "upper": 0.798
+  },
+  "logreg_max": {
+   "auroc": 0.529,
+   "lower": 0.453,
+   "n": 300,
+   "unsafe": 48,
+   "upper": 0.599
+  },
+  "nla_text": {
+   "auroc": 0.702,
+   "lower": 0.637,
+   "n": 300,
+   "unsafe": 48,
+   "upper": 0.765
+  },
+  "tfidf": {
+   "auroc": 0.723,
+   "lower": 0.64,
+   "n": 300,
+   "unsafe": 48,
+   "upper": 0.794
+  },
+  "transcript": {
+   "auroc": 0.599,
+   "lower": 0.548,
+   "n": 300,
+   "unsafe": 48,
+   "upper": 0.658
+  }
+ }
+}

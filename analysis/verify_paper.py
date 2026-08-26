@@ -327,6 +327,31 @@ for frag in [f"{sc['unique_trajectories']} unique", "280/280"]:
     if frag not in TEX:
         BAD.append(f"coverage fragment missing: '{frag}'")
 
+# ---- Paired deltas, operating points, pooled transfer vs EXP_paired_deltas.json ----
+pdx = json.load(open(HERE / "EXP_paired_deltas.json"))
+def f3(x):
+    return f"{x:.3f}".rstrip("0").rstrip(".") if False else f"{x:.3f}"
+pool = pdx["pooled_transfer_cluster_bootstrap"]
+for disp, key in (("centroid", "centroid_max"), ("TF-IDF", "tfidf"), ("trained NLA text", "nla_text"),
+                  ("naive Bayes", "transcript"), ("logistic probe", "logreg_max")):
+    c = pool[key]
+    frag = f"{disp} {c['auroc']:.3f} [{c['lower']:.3f}, {c['upper']:.3f}]"
+    if frag not in TEX:
+        BAD.append(f"pooled transfer fragment missing: '{frag}'")
+dl = pdx["paired_deltas_stratified"]
+for name, d in (("logreg_minus_tfidf", dl["logreg_minus_tfidf"]),
+                ("logreg_minus_nb_visible", dl["logreg_minus_nb_visible"]),
+                ("centroid_minus_tfidf", dl["centroid_minus_tfidf"]),
+                ("grouped logreg_minus_tfidf", pdx["paired_deltas_grouped_seed13"]["logreg_minus_tfidf"])):
+    want = f"${d['delta']:+.3f}$ [${d['lower']:.3f}$, ${d['upper']:.3f}$]"
+    if want not in TEX:
+        BAD.append(f"paired delta fragment missing ({name}): '{want}'")
+ops = pdx["fpr_at_90tpr_stratified_oof"]
+ops_frag = (f"logistic {ops['logreg_max']:.3f}, TF-IDF {ops['tfidf']:.3f}, naive Bayes {ops['transcript']:.3f}, "
+            f"centroid {ops['centroid_max']:.3f}, NLA text {ops['nla_text']:.3f}")
+if ops_frag not in TEX:
+    BAD.append(f"FPR@90TPR fragment missing: '{ops_frag}'")
+
 # goal-holdout range fragment
 xi = controls["cross_injection_transfer_pre_action"]
 lr_vals = [v["logreg_max"] for v in xi.values()]
