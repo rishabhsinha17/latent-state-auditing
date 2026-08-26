@@ -120,7 +120,7 @@ def find_monitors(o):
             if r:
                 return r
 mons = find_monitors(exp_summary)
-sec = section("label{tab:generated-action-main}", "label{tab:stratified}")
+sec = section("label{tab:generated-action-main}", "\\end{table}")
 for disp, key in NAMES.items():
     m = re.search(
         re.escape(disp)
@@ -293,10 +293,39 @@ prose_expect["mistral mixed contrast"] = (
     r"carries pre-action commitment \(([\d.]+) \[([\d.]+), ([\d.]+)\]\) with \\emph\{inverted\} exposure ranking \(([\d.]+) \[([\d.]+), ([\d.]+)\]\)",
     [ms["pre_action_attacked_only"]["auroc"], ms["pre_action_attacked_only"]["lower"], ms["pre_action_attacked_only"]["upper"],
      ms["exposure_among_safe"]["auroc"], ms["exposure_among_safe"]["lower"], ms["exposure_among_safe"]["upper"]])
-if "replicates on Mistral-7B (0.896; 0.856 under leakage-controlled folds)" not in TEX:
+if "0.896 on Mistral-7B, where the naive contrast instead learns commitment with \\emph{inverted} exposure ranking" not in TEX:
     BAD.append("abstract Mistral clause missing or mismatched")
-if "commitment up to two steps early (AUROC 0.85--0.88)" not in TEX:
-    BAD.append("abstract commitment range fragment missing")
+if "(logistic AUROC 0.853, matched by a trained TF-IDF text baseline at 0.855; 0.896 on Mistral-7B" not in TEX:
+    BAD.append("abstract commitment fragment missing")
+
+# ---- Export coverage / compliance table (Appendix) vs EXP_suite_counts.json ----
+sc = json.load(open(HERE / "EXP_suite_counts.json"))
+comp = section("label{tab:compliance}", "\\end{table}")
+for key, cell in sc["cells"].items():
+    suite, atk = key.split(":")
+    if atk == "clean":
+        continue
+    row = re.search(
+        re.escape(suite) + r" & " + re.escape(atk).replace("_", r"\\_")
+        + r" & (\d+) & (\d+) & ([\d-]+)", comp)
+    if not row:
+        BAD.append(f"compliance row missing: {key}")
+        continue
+    check(f"compliance {key} attacked", row.group(1), cell["n"])
+    check(f"compliance {key} unsafe", row.group(2), cell["unsafe"])
+    clean_cell = sc["cells"].get(f"{suite}:clean", {"n": None})
+    if row.group(3) != "---":
+        check(f"compliance {key} clean", row.group(3), clean_cell["n"])
+tot = re.search(r"Total & & (\d+) & (\d+) & (\d+)", comp)
+if not tot:
+    BAD.append("compliance total row missing")
+else:
+    check("compliance total attacked", tot.group(1), sc["attacked_total"])
+    check("compliance total unsafe", tot.group(2), sc["unsafe_total"])
+    check("compliance total clean", tot.group(3), sc["clean_total"])
+for frag in [f"{sc['unique_trajectories']} unique", "280/280"]:
+    if frag not in TEX:
+        BAD.append(f"coverage fragment missing: '{frag}'")
 
 # goal-holdout range fragment
 xi = controls["cross_injection_transfer_pre_action"]

@@ -1,0 +1,56 @@
+{
+ "unique_trajectories": 886,
+ "attacked_total": 789,
+ "clean_total": 97,
+ "unsafe_total": 189,
+ "cells": {
+  "banking:clean": {
+   "n": 16,
+   "unsafe": 0
+  },
+  "banking:important_instructions": {
+   "n": 144,
+   "unsafe": 0
+  },
+  "slack:clean": {
+   "n": 21,
+   "unsafe": 0
+  },
+  "slack:important_instructions": {
+   "n": 105,
+   "unsafe": 0
+  },
+  "travel:clean": {
+   "n": 20,
+   "unsafe": 0
+  },
+  "travel:important_instructions": {
+   "n": 140,
+   "unsafe": 15
+  },
+  "workspace:clean": {
+   "n": 40,
+   "unsafe": 0
+  },
+  "workspace:ignore_previous": {
+   "n": 40,
+   "unsafe": 5
+  },
+  "workspace:important_instructions": {
+   "n": 240,
+   "unsafe": 141
+  },
+  "workspace:injecagent": {
+   "n": 40,
+   "unsafe": 2
+  },
+  "workspace:system_message": {
+   "n": 40,
+   "unsafe": 0
+  },
+  "workspace:tool_knowledge": {
+   "n": 40,
+   "unsafe": 26
+  }
+ }
+}
