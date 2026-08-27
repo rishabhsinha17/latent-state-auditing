@@ -309,6 +309,8 @@ if "0.896 on Mistral-7B and 0.912 on OLMo-2-7B, whose naive contrasts learn diff
     BAD.append("abstract Mistral/OLMo clause missing or mismatched")
 if "(logistic AUROC 0.853, matched by a trained TF-IDF text baseline at 0.855; 0.896 on Mistral-7B" not in TEX:
     BAD.append("abstract commitment fragment missing")
+if "probe 1.000 versus trained text 0.908" not in TEX:
+    BAD.append("abstract exposure-separation fragment missing")
 
 # ---- Third model family (OLMo-2) vs THIRD_MODEL_*.json ----
 tc = json.load(open(HERE / "THIRD_MODEL_commitment.json"))

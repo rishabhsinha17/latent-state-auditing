@@ -119,10 +119,11 @@ def fig2():
         ("Logistic probe, $t{-}2$", ps[t2_key]["logreg"], None, ACT, "C"),
         ("Logistic probe, $t{-}1$", ps[t1_key]["logreg"], None, ACT, "C"),
         ("Logistic probe (Mistral-7B)", mc["stratified_seed13"]["logreg_max"], mc["grouped_means"]["logreg_max"], ACT, "D"),
+        ("Logistic probe (OLMo-2-7B)", oc["stratified_seed13"]["logreg_max"], oc["grouped_means"]["logreg_max"], ACT, "D"),
     ]
     groups = {"A": "Exposure-contrast training (attacked vs. clean)",
               "B": "Commitment-contrast training (unsafe vs. attacked-safe)",
-              "C": "Per-step (commitment contrast)", "D": "Second model"}
+              "C": "Per-step (commitment contrast)", "D": "Further model families"}
     fig, ax = plt.subplots(figsize=(5.6, 2.75))
     y = 0
     ylabels, ypos = [], []
