@@ -121,7 +121,7 @@ def fig2():
         ("Logistic probe (Mistral-7B)", mc["stratified_seed13"]["logreg_max"], mc["grouped_means"]["logreg_max"], ACT, "D"),
         ("Logistic probe (OLMo-2-7B)", oc["stratified_seed13"]["logreg_max"], oc["grouped_means"]["logreg_max"], ACT, "D"),
     ]
-    groups = {"A": "Exposure-contrast training (attacked vs. clean)",
+    groups = {"A": "Naive mixed-contrast training (unsafe vs. rest)",
               "B": "Commitment-contrast training (unsafe vs. attacked-safe)",
               "C": "Per-step (commitment contrast)", "D": "Further model families"}
     fig, ax = plt.subplots(figsize=(5.6, 2.75))
