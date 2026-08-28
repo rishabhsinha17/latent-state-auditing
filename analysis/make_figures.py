@@ -42,7 +42,7 @@ def cell_color(a):
 def fig1():
     panels = [
         ("Qwen2.5-7B", [
-            ("attacked vs.\nclean\n(standard)",
+            ("unsafe vs.\nrest\n(naive mixed)",
              strat["raw_activation_probe"]["exposure_among_safe"],
              strat["raw_activation_probe"]["pre_action_attacked_only"]),
             ("unsafe vs.\nattacked-safe\n(commitment)",
