@@ -92,7 +92,7 @@ for disp, key in NAMES.items():
 # ---- Transfer prose (table removed; four cited values) ----
 t4 = json.load(open(HERE / "T4_transfer_cis.json"))["splits"]
 m = re.search(
-    r"workspace to slack gives AUROC ([\d.]+) \[([\d.]+), ([\d.]+)\] \(trained NLA text\) and ([\d.]+) \(activation probe\), slack to workspace ([\d.]+) \[([\d.]+), ([\d.]+)\] and ([\d.]+)",
+    r"[Ww]orkspace to slack gives AUROC ([\d.]+) \[([\d.]+), ([\d.]+)\] \(trained NLA text\) and ([\d.]+) \(activation probe\), slack to workspace ([\d.]+) \[([\d.]+), ([\d.]+)\] and ([\d.]+)",
     TEX,
 )
 if not m:
@@ -206,7 +206,7 @@ prose_expect = {
          strat["raw_activation_probe"]["pre_action_attacked_only"]["auroc"],
          strat["raw_activation_probe"]["pre_action_attacked_only"]["lower"],
          strat["raw_activation_probe"]["pre_action_attacked_only"]["upper"]]),
-    "central commitment-trained sentence": (r"rises from ([\d.]+) to ([\d.]+) \[([\d.]+), ([\d.]+)\], and an added L2-regularized logistic probe reaches ([\d.]+) \[([\d.]+), ([\d.]+)\]; both hold under folds grouped by user task \(([\d.]+) and ([\d.]+)\)",
+    "central commitment-trained sentence": (r"rises from ([\d.]+) to ([\d.]+) \[([\d.]+), ([\d.]+)\]\. An added L2-regularized logistic probe reaches ([\d.]+) \[([\d.]+), ([\d.]+)\]\. Both hold under folds grouped by user task \(([\d.]+) and ([\d.]+)\)",
         [strat["raw_activation_probe"]["pre_action_attacked_only"]["auroc"],
          strat13["centroid_max"]["auroc"], strat13["centroid_max"]["lower"], strat13["centroid_max"]["upper"],
          strat13["logreg_max"]["auroc"], strat13["logreg_max"]["lower"], strat13["logreg_max"]["upper"],
@@ -218,7 +218,7 @@ prose_expect = {
 rr = json.load(open(HERE / "EXP_reviewer_response.json"))
 nm = json.load(open(HERE / "NLA_MULTISAMPLE_commitment.json"))
 prose_expect["central nla collapse"] = (
-    r"loses the commitment signal almost entirely under single-sample verbalization \(naive Bayes ([\d.]+) \[([\d.]+), ([\d.]+)\]; TF-IDF ([\d.]+) \[([\d.]+), ([\d.]+)\]; a released three-sample rerun recovers part of it, ([\d.]+) and ([\d.]+), Appendix~\\ref\{app:negative\}\) although the signal remains available both in its source activations \(([\d.]+)\) and, under matched classifiers, in the visible context \(([\d.]+) and ([\d.]+)\)",
+    r"loses the commitment signal almost entirely under single-sample verbalization \(naive Bayes ([\d.]+) \[([\d.]+), ([\d.]+)\]; TF-IDF ([\d.]+) \[([\d.]+), ([\d.]+)\]; a released three-sample rerun recovers part of it, ([\d.]+) and ([\d.]+), Appendix~\\ref\{app:negative\}\)\. Yet the signal remains available both in its source activations \(([\d.]+)\) and, under matched classifiers, in the visible context \(([\d.]+) and ([\d.]+)\)",
     [strat13["nla_text"]["auroc"], strat13["nla_text"]["lower"], strat13["nla_text"]["upper"],
      rr["tfidf_on_nla_text_commitment"]["auroc"], rr["tfidf_on_nla_text_commitment"]["lower"], rr["tfidf_on_nla_text_commitment"]["upper"],
      nm["stratified_seed13"]["nla_text"]["auroc"], nm["tfidf_on_nla_text_k3"]["auroc"],
@@ -297,7 +297,7 @@ else:
 mc = json.load(open(HERE / "MISTRAL_commitment.json"))
 ms = json.load(open(HERE / "MISTRAL_stratified.json"))["monitors"]["raw_activation_probe"]
 prose_expect["mistral commitment"] = (
-    r"commitment-contrast probes reach ([\d.]+) \[([\d.]+), ([\d.]+)\] \(([\d.]+) grouped\), with TF-IDF text at ([\d.]+) in-distribution but ([\d.]+) grouped",
+    r"commitment-contrast probes reach ([\d.]+) \[([\d.]+), ([\d.]+)\] \(([\d.]+) grouped\)\. TF-IDF text sits at ([\d.]+) in-distribution but ([\d.]+) grouped",
     [mc["stratified_seed13"]["logreg_max"]["auroc"], mc["stratified_seed13"]["logreg_max"]["lower"],
      mc["stratified_seed13"]["logreg_max"]["upper"], mc["grouped_means"]["logreg_max"],
      mc["tfidf_stratified"]["auroc"], mc["tfidf_grouped_mean"]])
@@ -305,9 +305,9 @@ prose_expect["mistral mixed contrast"] = (
     r"carries pre-action commitment \(([\d.]+) \[([\d.]+), ([\d.]+)\]\) with \\emph\{inverted\} exposure ranking \(([\d.]+) \[([\d.]+), ([\d.]+)\]\)",
     [ms["pre_action_attacked_only"]["auroc"], ms["pre_action_attacked_only"]["lower"], ms["pre_action_attacked_only"]["upper"],
      ms["exposure_among_safe"]["auroc"], ms["exposure_among_safe"]["lower"], ms["exposure_among_safe"]["upper"]])
-if "0.896 on Mistral-7B and 0.912 on OLMo-2-7B, whose naive contrasts learn different things" not in TEX:
+if "Mistral-7B reaches 0.896 and OLMo-2-7B 0.912; their naive contrasts learn different things" not in TEX:
     BAD.append("abstract Mistral/OLMo clause missing or mismatched")
-if "(logistic AUROC 0.853, matched by a trained TF-IDF text baseline at 0.855; 0.896 on Mistral-7B" not in TEX:
+if "(logistic AUROC 0.853, matched by a trained TF-IDF text baseline at 0.855)" not in TEX:
     BAD.append("abstract commitment fragment missing")
 if "probe 1.000 versus trained text 0.908" not in TEX:
     BAD.append("abstract exposure-separation fragment missing")
@@ -329,7 +329,7 @@ for disp, cell, grouped in (
     if frag not in tm:
         BAD.append(f"third-model row mismatch ({disp}): '{frag}'")
 prose_expect["third model recovery"] = (
-    r"OLMo-2-7B-Instruct, same grid: 480 attacked, (\d+) unsafe; Appendix~\\ref\{app:third-model\}\): commitment-contrast probes reach ([\d.]+) \[([\d.]+), ([\d.]+)\] \(([\d.]+) grouped; TF-IDF ([\d.]+), ([\d.]+) grouped\), while its naive contrast reads \\emph\{both\} axes \(exposure ([\d.]+), pre-action commitment ([\d.]+)\)",
+    r"OLMo-2-7B-Instruct, same grid: 480 attacked, (\d+) unsafe; Appendix~\\ref\{app:third-model\}\)\. Commitment-contrast probes reach ([\d.]+) \[([\d.]+), ([\d.]+)\] \(([\d.]+) grouped; TF-IDF ([\d.]+), ([\d.]+) grouped\), while its naive contrast reads \\emph\{both\} axes \(exposure ([\d.]+), pre-action commitment ([\d.]+)\)",
     [tc["n_unsafe"], tc["stratified_seed13"]["logreg_max"]["auroc"], tc["stratified_seed13"]["logreg_max"]["lower"],
      tc["stratified_seed13"]["logreg_max"]["upper"], tc["grouped_means"]["logreg_max"],
      tc["tfidf_stratified"]["auroc"], tc["tfidf_grouped_mean"],
