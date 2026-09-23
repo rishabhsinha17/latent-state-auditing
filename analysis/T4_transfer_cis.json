@@ -1,7 +1,7 @@
 {
   "resamples": 1000,
   "seed": 13,
-  "source": "/private/tmp/claude-502/-Users-a12345-open-source-contribution/f810495d-d719-48ed-af10-368e0cdfdb63/scratchpad/t4_transfer/transfer_experiments.jsonl",
+  "source": "runs/t3_replay200",
   "splits": {
     "attack_holdout:ignore_previous": {
       "hybrid": {
