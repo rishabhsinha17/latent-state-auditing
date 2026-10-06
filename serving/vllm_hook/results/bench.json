@@ -1,0 +1,47 @@
+[
+  {
+    "config": "vllm_eager",
+    "requests": 280,
+    "seconds": 158.59,
+    "req_per_s": 1.766,
+    "prompt_tok_per_s": 8862,
+    "output_tok_per_s": 113,
+    "max_tokens": 64
+  },
+  {
+    "config": "vllm_graphs",
+    "requests": 280,
+    "seconds": 158.47,
+    "req_per_s": 1.767,
+    "prompt_tok_per_s": 8869,
+    "output_tok_per_s": 113,
+    "max_tokens": 64
+  },
+  {
+    "config": "hook_off",
+    "requests": 280,
+    "seconds": 158.61,
+    "req_per_s": 1.765,
+    "prompt_tok_per_s": 8861,
+    "output_tok_per_s": 113,
+    "max_tokens": 64
+  },
+  {
+    "config": "hook_mem",
+    "requests": 280,
+    "seconds": 159.06,
+    "req_per_s": 1.76,
+    "prompt_tok_per_s": 8836,
+    "output_tok_per_s": 113,
+    "max_tokens": 64
+  },
+  {
+    "config": "hook_disk",
+    "requests": 280,
+    "seconds": 158.59,
+    "req_per_s": 1.766,
+    "prompt_tok_per_s": 8862,
+    "output_tok_per_s": 113,
+    "max_tokens": 64
+  }
+]

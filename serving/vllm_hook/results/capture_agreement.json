@@ -1,0 +1,65 @@
+{
+  "qwen2.5-7b_bf16_layer21": {
+    "vllm_full_vs_hf_fresh": {
+      "cosine_min": 0.995688399544851,
+      "cosine_median": 0.9996940929149625,
+      "rel_l2_median": 0.0248260568898247,
+      "rel_l2_max": 0.09283660931166463
+    },
+    "vllm_bs1_vs_hf_fresh": {
+      "cosine_min": 0.9929240302868365,
+      "cosine_median": 0.9996857622607416,
+      "rel_l2_median": 0.025179784630798296,
+      "rel_l2_max": 0.1193784764689757
+    },
+    "vllm_full_vs_vllm_bs1": {
+      "cosine_min": 0.994584266945789,
+      "cosine_median": 0.9997373847541032,
+      "rel_l2_median": 0.022988353083274373,
+      "rel_l2_max": 0.1040810853171994
+    },
+    "hf_fresh_vs_stored": {
+      "cosine_min": 0.9956566319776158,
+      "cosine_median": 0.999684483465132,
+      "rel_l2_median": 0.025219338747887905,
+      "rel_l2_max": 0.09435729637844972
+    },
+    "vllm_full_vs_stored": {
+      "cosine_min": 0.9950540002196169,
+      "cosine_median": 0.9997009570725193,
+      "rel_l2_median": 0.024566033229299705,
+      "rel_l2_max": 0.09979879935664641
+    }
+  },
+  "qwen2.5-1.5b_layer14_dtype_control": {
+    "fp32_vllm_vs_hf": {
+      "cosine_min": 0.9999949794566725,
+      "cosine_median": 0.9999992198414518,
+      "rel_l2_median": 0.0013190894387625073,
+      "rel_l2_max": 0.00317446650164431
+    },
+    "bf16_vllm_vs_hf": {
+      "cosine_min": 0.9995659196860799,
+      "cosine_median": 0.9998764619640125,
+      "rel_l2_median": 0.015898769286340493,
+      "rel_l2_max": 0.029481969031897367
+    },
+    "hf_bf16_vs_hf_fp32": {
+      "cosine_min": 0.9996407392441635,
+      "cosine_median": 0.9998874469680089,
+      "rel_l2_median": 0.015242037877308717,
+      "rel_l2_max": 0.027137048751588008
+    }
+  },
+  "env": {
+    "path": "vllm",
+    "chunk": 839,
+    "layer": 21,
+    "rows": 839,
+    "seconds": 29.3,
+    "torch": "2.11.0+cu130",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "vllm": "0.21.0",
+    "transformers": "4.57.6"
+  }
+}

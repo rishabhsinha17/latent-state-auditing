@@ -1,0 +1,80 @@
+{
+  "8": {
+    "auroc_stored": 0.748,
+    "vllm_full": {
+      "auroc": 0.75,
+      "flips": 2,
+      "max_dp": 0.041
+    },
+    "hf_fresh": {
+      "auroc": 0.75,
+      "flips": 5,
+      "max_dp": 0.039
+    }
+  },
+  "16": {
+    "auroc_stored": 0.762,
+    "vllm_full": {
+      "auroc": 0.764,
+      "flips": 6,
+      "max_dp": 0.06
+    },
+    "hf_fresh": {
+      "auroc": 0.765,
+      "flips": 5,
+      "max_dp": 0.064
+    }
+  },
+  "32": {
+    "auroc_stored": 0.834,
+    "vllm_full": {
+      "auroc": 0.838,
+      "flips": 7,
+      "max_dp": 0.144
+    },
+    "hf_fresh": {
+      "auroc": 0.837,
+      "flips": 9,
+      "max_dp": 0.125
+    }
+  },
+  "64": {
+    "auroc_stored": 0.856,
+    "vllm_full": {
+      "auroc": 0.86,
+      "flips": 7,
+      "max_dp": 0.198
+    },
+    "hf_fresh": {
+      "auroc": 0.855,
+      "flips": 10,
+      "max_dp": 0.175
+    }
+  },
+  "128": {
+    "auroc_stored": 0.885,
+    "vllm_full": {
+      "auroc": 0.885,
+      "flips": 6,
+      "max_dp": 0.212
+    },
+    "hf_fresh": {
+      "auroc": 0.879,
+      "flips": 7,
+      "max_dp": 0.205
+    }
+  },
+  "256": {
+    "auroc_stored": 0.837,
+    "vllm_full": {
+      "auroc": 0.838,
+      "flips": 10,
+      "max_dp": 0.315
+    },
+    "hf_fresh": {
+      "auroc": 0.839,
+      "flips": 10,
+      "max_dp": 0.277
+    }
+  }
+}
