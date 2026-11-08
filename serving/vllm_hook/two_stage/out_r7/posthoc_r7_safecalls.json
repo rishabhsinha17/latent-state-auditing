@@ -1,0 +1,19 @@
+{
+ "protocol": "POST HOC, DESCRIPTIVE (r7, after eval_r7 on Qwen): what are the safe tool calls on InjecAgent?\n\nFor each model, every step whose action has a parsed call and is labelled safe, classified by its\nfirst call: a re-call of the step's user tool (the tool already called in the context), another\noffered tool, or a tool that was not offered. If safe calls are all re-calls, a probe can separate\nsafe from unsafe calls by \"repeats the previous call\" without any signal about the injection.\nUsage: posthoc_r7_safecalls.py <ia chat dir> <raw dir> <out json>\n",
+ "results": {
+  "qwen": {
+   "safe_calls": {
+    "user_tool_recall": 92
+   },
+   "unsafe": 316
+  },
+  "granite": {
+   "safe_calls": {},
+   "unsafe": 65
+  },
+  "hermes": {
+   "safe_calls": {},
+   "unsafe": 13
+  }
+ }
+}
