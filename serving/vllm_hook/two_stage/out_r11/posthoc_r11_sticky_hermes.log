@@ -1,0 +1,6 @@
+hermes seed 13
+hermes seed 0
+hermes seed 1
+hermes seed 2
+hermes {"CUR:plain": {"v1_attacked": [0.865, 0.329], "ps_all": [0.683, 0.48], "v1_clean": [0.144], "cd_all": [0.433]}, "CUR:sticky": {"v1_attacked": [0.909, 0.353], "ps_all": [0.921, 0.779], "v1_clean": [0.374], "cd_all": [0.78]}, "NEW-P:plain": {"v1_attacked": [0.861, 0.347], "ps_all": [0.375, 0.242], "v1_clean": [0.211], "cd_all": [0.107]}, "NEW-P:sticky": {"v1_attacked": [0.885, 0.35], "ps_all": [0.908, 0.778], "v1_clean": [0.278], "cd_all": [0.339]}, "S1": {"v1_attacked": [0.904, 0.347], "ps_all": [0.915, 0.774], "v1_clean": [0.371], "cd_all": [0.79]}} {"K1_CUR": "recovers", "K1_NEW-P": "recovers"}
+EXIT 0

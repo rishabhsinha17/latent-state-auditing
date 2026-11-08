@@ -1,0 +1,12 @@
+granite A seed 13
+granite A seed 0
+granite A seed 1
+granite A seed 2
+granite A {"CUR:C-PRES/joint": {"v1_attacked": [0.882, 0.341], "v1_clean": [0.211], "cd_all": [0.539], "ps_all": [0.569, 0.36]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.878, 0.332], "v1_clean": [0.093], "cd_all": [0.022], "ps_all": [0.31, 0.095]}, "NEW-PW:C-PRES/joint": {"v1_attacked": [0.885, 0.338], "v1_clean": [0.106], "cd_all": [0.024], "ps_all": [0.335, 0.119]}, "NEW-PA:C-PRES/joint": {"v1_attacked": [0.93, 0.465], "v1_clean": [0.33], "cd_all": [0.254], "ps_all": [0.801, 0.444]}}
+granite D seed 13
+granite D seed 0
+granite D seed 1
+granite D seed 2
+granite D {"CUR:C-PRES/joint": {"v1_attacked": [0.867, 0.336], "v1_clean": [0.222], "cd_all": [0.508], "ps_all": [0.48, 0.261]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.858, 0.335], "v1_clean": [0.162], "cd_all": [0.03], "ps_all": [0.283, 0.075]}, "NEW-PW:C-PRES/joint": {"v1_attacked": [0.862, 0.342], "v1_clean": [0.152], "cd_all": [0.029], "ps_all": [0.295, 0.086]}, "NEW-PA:C-PRES/joint": {"v1_attacked": [0.86, 0.456], "v1_clean": [0.402], "cd_all": [0.277], "ps_all": [0.772, 0.412]}}
+granite {"v1_attacked": 150, "ps_all": 112, "ps_earlier": 73, "ps_last": 39} {"NEW-P": {"L1": "loses", "B1": true, "B2": true, "B3": true, "bar": true, "adopted": false, "L2": "loss"}, "NEW-PW": {"L1": "loses", "B1": true, "B2": true, "B3": true, "bar": true, "adopted": false}, "NEW-PA": {"L1": "keeps", "B1": false, "B2": false, "B3": false, "bar": false, "adopted": false}}
+EXIT 0

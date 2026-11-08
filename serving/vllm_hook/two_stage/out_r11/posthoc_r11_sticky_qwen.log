@@ -1,0 +1,6 @@
+qwen seed 13
+qwen seed 0
+qwen seed 1
+qwen seed 2
+qwen {"CUR:plain": {"v1_attacked": [0.894, 0.426], "ps_all": [0.562, 0.303], "v1_clean": [0.165], "cd_all": [0.336]}, "CUR:sticky": {"v1_attacked": [0.899, 0.43], "ps_all": [0.898, 0.714], "v1_clean": [0.32], "cd_all": [0.562]}, "NEW-P:plain": {"v1_attacked": [0.888, 0.42], "ps_all": [0.35, 0.128], "v1_clean": [0.134], "cd_all": [0.044]}, "NEW-P:sticky": {"v1_attacked": [0.888, 0.42], "ps_all": [0.895, 0.708], "v1_clean": [0.168], "cd_all": [0.182]}, "S1": {"v1_attacked": [0.9, 0.432], "ps_all": [0.896, 0.713], "v1_clean": [0.405], "cd_all": [0.713]}} {"K1_CUR": "recovers", "K1_NEW-P": "recovers"}
+EXIT 0

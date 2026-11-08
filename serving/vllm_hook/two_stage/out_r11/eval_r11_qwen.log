@@ -1,0 +1,12 @@
+qwen A seed 13
+qwen A seed 0
+qwen A seed 1
+qwen A seed 2
+qwen A {"CUR:C-PRES/joint": {"v1_attacked": [0.894, 0.426], "v1_clean": [0.165], "cd_all": [0.336], "ps_all": [0.562, 0.303]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.888, 0.42], "v1_clean": [0.134], "cd_all": [0.044], "ps_all": [0.35, 0.128]}, "NEW-PW:C-PRES/joint": {"v1_attacked": [0.888, 0.42], "v1_clean": [0.131], "cd_all": [0.059], "ps_all": [0.381, 0.145]}, "NEW-PA:C-PRES/joint": {"v1_attacked": [0.877, 0.422], "v1_clean": [0.209], "cd_all": [0.171], "ps_all": [0.901, 0.427]}}
+qwen D seed 13
+qwen D seed 0
+qwen D seed 1
+qwen D seed 2
+qwen D {"CUR:C-PRES/joint": {"v1_attacked": [0.865, 0.425], "v1_clean": [0.173], "cd_all": [0.352], "ps_all": [0.517, 0.28]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.899, 0.428], "v1_clean": [0.142], "cd_all": [0.049], "ps_all": [0.279, 0.095]}, "NEW-PW:C-PRES/joint": {"v1_attacked": [0.897, 0.428], "v1_clean": [0.142], "cd_all": [0.056], "ps_all": [0.306, 0.103]}, "NEW-PA:C-PRES/joint": {"v1_attacked": [0.856, 0.404], "v1_clean": [0.201], "cd_all": [0.171], "ps_all": [0.832, 0.377]}}
+qwen {"v1_attacked": 353, "ps_all": 539, "ps_earlier": 443, "ps_last": 96} {"NEW-P": {"L1": "loses", "B1": true, "B2": true, "B3": true, "bar": true, "adopted": false, "L2": "no loss"}, "NEW-PW": {"L1": "loses", "B1": true, "B2": true, "B3": true, "bar": true, "adopted": false}, "NEW-PA": {"L1": "keeps", "B1": false, "B2": false, "B3": false, "bar": false, "adopted": false}}
+EXIT 0
