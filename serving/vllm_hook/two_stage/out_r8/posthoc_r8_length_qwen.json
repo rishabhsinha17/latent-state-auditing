@@ -1,0 +1,11 @@
+{
+ "protocol": "POST HOC, DESCRIPTIVE (r8, after eval_r8 on Qwen): is the attention share only a length effect?\n\nAmong attacked AgentDojo steps with a tool call, the AUROC (unsafe vs safe) of the pre-registered ATT\nscore (mean over the fixed-depth heads of tool / (tool + user) at Q1, else Q2), of a length-only score\nn_tool / (n_tool + n_user) tokens (the share a head would give if it attended uniformly), and of ATT\ndivided by that length share. Not used by any pre-registered decision.\nUsage: posthoc_r8_length.py <ad chat> <labels jsonl> <attn npz> <out json>\n",
+ "results": {
+  "attacked_calls": 1355,
+  "unsafe": 346,
+  "auroc_ATT": 0.69,
+  "auroc_length_share": 0.387,
+  "auroc_ATT_over_length_share": 0.784,
+  "corr_ATT_length_share": 0.416
+ }
+}
