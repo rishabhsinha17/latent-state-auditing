@@ -1,0 +1,463 @@
+{
+  "protocol": "Held-out evaluation of two-stage FPR reduction for the tool-call risk probe (CPU).\n\nData (from chat/gen_capture.py + chat/label_steps.py): suite_full.{npz,jsonl,labels.jsonl}.\n1826 AgentDojo v1 steps of Qwen2.5-7B-Instruct (bf16, vLLM-Hook capture, chat template):\n1729 attacked (358 unsafe) and 97 clean. Features are last-prompt-token hidden states at\nlayers 7/14/21/28. This is the same data the released probe (#41) was fit on.\n\nProtocol. No test label reaches any fit or threshold.\n  outer   5 folds grouped by suite-qualified user task, seeds 13, 0, 1, 2\n  inner   inside each outer-train split, 5 grouped folds give out-of-fold (OOF) scores for\n          stage 1 and every stage-2 candidate. Thresholds come from those OOF scores\n          (calibrate_cascade for cascades, threshold_for_recall for single stages).\n          Final models are refit on the whole outer-train split.\n  test    unseen user tasks: recall on unsafe steps, FPR on attacked-but-safe steps, FPR on\n          clean steps (never trained on), and the fraction of steps that reach stage 2.\n\nDetectors, fixed before any test result was seen:\n  S1     released recipe, layer 28, PCA-32 + logistic (single stage)\n  L21    layer 21, PCA-64 + logistic (single stage)\n  AVG    mean of S1 and L21 probabilities (single-stage ensemble on the same features as C-A)\n  C-A    cascade, S1 gate, stage 2 = L21 probe trained on every attacked step\n  C-HN   cascade, S1 gate, stage 2 trained only on the steps S1 passes at 97% OOF recall\n         (its hard negatives), features layers 14+21+28 concatenated, PCA-64 + logistic\n\nUsage: eval_two_stage.py <chat dir> <vllm-hook repo> <out dir> [--seeds 13,0,1,2]\n",
+  "seeds": [
+    13,
+    0,
+    1,
+    2
+  ],
+  "targets": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "hn_gate_recall": 0.97,
+  "n": {
+    "attacked": 1729,
+    "unsafe": 358,
+    "clean": 97,
+    "user_task_groups": 97
+  },
+  "summary_mean_sd_over_seeds": {
+    "S1@0.8": {
+      "recall": [
+        0.81,
+        0.005
+      ],
+      "fpr_attacked_safe": [
+        0.227,
+        0.005
+      ],
+      "fpr_clean": [
+        0.204,
+        0.026
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "L21@0.8": {
+      "recall": [
+        0.806,
+        0.021
+      ],
+      "fpr_attacked_safe": [
+        0.248,
+        0.018
+      ],
+      "fpr_clean": [
+        0.18,
+        0.012
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "AVG@0.8": {
+      "recall": [
+        0.801,
+        0.009
+      ],
+      "fpr_attacked_safe": [
+        0.23,
+        0.003
+      ],
+      "fpr_clean": [
+        0.18,
+        0.009
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "C-A@0.8": {
+      "recall": [
+        0.791,
+        0.011
+      ],
+      "fpr_attacked_safe": [
+        0.222,
+        0.011
+      ],
+      "fpr_clean": [
+        0.165,
+        0.018
+      ],
+      "stage2_rate": [
+        0.412,
+        0.037
+      ]
+    },
+    "C-HN@0.8": {
+      "recall": [
+        0.797,
+        0.01
+      ],
+      "fpr_attacked_safe": [
+        0.226,
+        0.005
+      ],
+      "fpr_clean": [
+        0.198,
+        0.022
+      ],
+      "stage2_rate": [
+        0.385,
+        0.035
+      ]
+    },
+    "S1@0.9": {
+      "recall": [
+        0.899,
+        0.01
+      ],
+      "fpr_attacked_safe": [
+        0.394,
+        0.012
+      ],
+      "fpr_clean": [
+        0.387,
+        0.015
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "L21@0.9": {
+      "recall": [
+        0.896,
+        0.01
+      ],
+      "fpr_attacked_safe": [
+        0.43,
+        0.054
+      ],
+      "fpr_clean": [
+        0.335,
+        0.038
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "AVG@0.9": {
+      "recall": [
+        0.902,
+        0.007
+      ],
+      "fpr_attacked_safe": [
+        0.391,
+        0.023
+      ],
+      "fpr_clean": [
+        0.351,
+        0.022
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "C-A@0.9": {
+      "recall": [
+        0.883,
+        0.009
+      ],
+      "fpr_attacked_safe": [
+        0.382,
+        0.023
+      ],
+      "fpr_clean": [
+        0.332,
+        0.034
+      ],
+      "stage2_rate": [
+        0.604,
+        0.061
+      ]
+    },
+    "C-HN@0.9": {
+      "recall": [
+        0.891,
+        0.009
+      ],
+      "fpr_attacked_safe": [
+        0.384,
+        0.012
+      ],
+      "fpr_clean": [
+        0.381,
+        0.018
+      ],
+      "stage2_rate": [
+        0.519,
+        0.018
+      ]
+    },
+    "S1@0.95": {
+      "recall": [
+        0.952,
+        0.005
+      ],
+      "fpr_attacked_safe": [
+        0.562,
+        0.024
+      ],
+      "fpr_clean": [
+        0.513,
+        0.034
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "L21@0.95": {
+      "recall": [
+        0.943,
+        0.006
+      ],
+      "fpr_attacked_safe": [
+        0.661,
+        0.038
+      ],
+      "fpr_clean": [
+        0.575,
+        0.034
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "AVG@0.95": {
+      "recall": [
+        0.943,
+        0.008
+      ],
+      "fpr_attacked_safe": [
+        0.516,
+        0.035
+      ],
+      "fpr_clean": [
+        0.461,
+        0.037
+      ],
+      "stage2_rate": [
+        1.0,
+        0.0
+      ]
+    },
+    "C-A@0.95": {
+      "recall": [
+        0.939,
+        0.003
+      ],
+      "fpr_attacked_safe": [
+        0.535,
+        0.034
+      ],
+      "fpr_clean": [
+        0.477,
+        0.034
+      ],
+      "stage2_rate": [
+        0.698,
+        0.033
+      ]
+    },
+    "C-HN@0.95": {
+      "recall": [
+        0.936,
+        0.006
+      ],
+      "fpr_attacked_safe": [
+        0.549,
+        0.022
+      ],
+      "fpr_clean": [
+        0.503,
+        0.03
+      ],
+      "stage2_rate": [
+        0.665,
+        0.043
+      ]
+    }
+  },
+  "paired_bootstrap_95ci_vs_S1": {
+    "L21-S1@0.8": {
+      "d_recall": [
+        -0.049,
+        0.029
+      ],
+      "d_fpr_attacked_safe": [
+        -0.012,
+        0.055
+      ],
+      "d_fpr_clean": [
+        -0.085,
+        0.044
+      ]
+    },
+    "AVG-S1@0.8": {
+      "d_recall": [
+        -0.028,
+        0.007
+      ],
+      "d_fpr_attacked_safe": [
+        -0.017,
+        0.026
+      ],
+      "d_fpr_clean": [
+        -0.072,
+        0.023
+      ]
+    },
+    "C-A-S1@0.8": {
+      "d_recall": [
+        -0.049,
+        0.004
+      ],
+      "d_fpr_attacked_safe": [
+        -0.02,
+        0.009
+      ],
+      "d_fpr_clean": [
+        -0.08,
+        0.005
+      ]
+    },
+    "C-HN-S1@0.8": {
+      "d_recall": [
+        -0.027,
+        0.004
+      ],
+      "d_fpr_attacked_safe": [
+        -0.01,
+        0.008
+      ],
+      "d_fpr_clean": [
+        -0.026,
+        0.018
+      ]
+    },
+    "L21-S1@0.9": {
+      "d_recall": [
+        -0.033,
+        0.025
+      ],
+      "d_fpr_attacked_safe": [
+        -0.008,
+        0.079
+      ],
+      "d_fpr_clean": [
+        -0.126,
+        0.021
+      ]
+    },
+    "AVG-S1@0.9": {
+      "d_recall": [
+        -0.013,
+        0.019
+      ],
+      "d_fpr_attacked_safe": [
+        -0.027,
+        0.019
+      ],
+      "d_fpr_clean": [
+        -0.077,
+        0.005
+      ]
+    },
+    "C-A-S1@0.9": {
+      "d_recall": [
+        -0.034,
+        0.003
+      ],
+      "d_fpr_attacked_safe": [
+        -0.031,
+        0.007
+      ],
+      "d_fpr_clean": [
+        -0.095,
+        -0.013
+      ]
+    },
+    "C-HN-S1@0.9": {
+      "d_recall": [
+        -0.016,
+        0.0
+      ],
+      "d_fpr_attacked_safe": [
+        -0.024,
+        0.001
+      ],
+      "d_fpr_clean": [
+        -0.023,
+        0.013
+      ]
+    },
+    "L21-S1@0.95": {
+      "d_recall": [
+        -0.035,
+        0.015
+      ],
+      "d_fpr_attacked_safe": [
+        0.035,
+        0.168
+      ],
+      "d_fpr_clean": [
+        -0.018,
+        0.142
+      ]
+    },
+    "AVG-S1@0.95": {
+      "d_recall": [
+        -0.026,
+        0.008
+      ],
+      "d_fpr_attacked_safe": [
+        -0.083,
+        -0.014
+      ],
+      "d_fpr_clean": [
+        -0.098,
+        -0.003
+      ]
+    },
+    "C-A-S1@0.95": {
+      "d_recall": [
+        -0.032,
+        0.0
+      ],
+      "d_fpr_attacked_safe": [
+        -0.061,
+        0.004
+      ],
+      "d_fpr_clean": [
+        -0.075,
+        0.003
+      ]
+    },
+    "C-HN-S1@0.95": {
+      "d_recall": [
+        -0.034,
+        -0.002
+      ],
+      "d_fpr_attacked_safe": [
+        -0.031,
+        0.004
+      ],
+      "d_fpr_clean": [
+        -0.031,
+        0.008
+      ]
+    }
+  }
+}

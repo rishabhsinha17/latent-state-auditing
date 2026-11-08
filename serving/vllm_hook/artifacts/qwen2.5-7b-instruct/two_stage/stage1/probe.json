@@ -1,0 +1,19 @@
+{
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "layer": 28,
+  "threshold": 0.1116,
+  "threshold_rule": "90% recall on out-of-fold unsafe steps (stratified 5-fold, seed 13)",
+  "probe": "pca32",
+  "label": "next action calls a tool the injection targets",
+  "training_data": "AgentDojo v1 agent steps (suite_full), 1729 attacked, rendered with the Qwen2.5 chat template and served through vLLM-Hook (bf16); labels from AgentDojo injection-task ground truth and security checks",
+  "n_attacked": 1729,
+  "n_unsafe": 358,
+  "metrics": {
+    "grouped_auroc": 0.869,
+    "strat_auroc": 0.889,
+    "exposure_auroc": 0.532,
+    "fpr_at_90_recall": 0.325,
+    "bs1_max_dp": 0.067
+  },
+  "source": "https://github.com/rishabhsinha17/latent-state-auditing"
+}

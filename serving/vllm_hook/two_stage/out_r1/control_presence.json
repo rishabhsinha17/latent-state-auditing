@@ -1,0 +1,75 @@
+{
+ "protocol": "POST HOC control for the C-PRES result: is the presence stage just a prompt-length detector?\n\nInjected tool outputs add tokens, so attacked prompts are longer than their clean twins. This\nchecks (1) how well prompt length alone separates attacked from clean, (2) the presence probe's\nAUROC inside prompt-length quartiles, and (3) split-half cascades with stage 2 = presence probe,\nprompt length, or the presence score with length regressed out (fit on the calibration half).\nScores are diagnose.py's grouped OOF scores (single level). Calibration on a random half of the\nuser tasks, metrics on the other half, 20 halves x 4 seeds, target recall 0.9.\nAlso: per-suite clean FPR of S1 vs C-PRES from eval_r1.py's nested held-out flags.\n\nUsage: control_presence.py <chat dir> <cascade.py> <out_r1 dir>\n",
+ "results": {
+  "length_auroc_attacked_vs_clean": 0.522,
+  "length_auroc_by_suite": {
+   "workspace": 0.592,
+   "travel": 0.611,
+   "banking": 0.747,
+   "slack": 0.734
+  },
+  "spearman_PRES_length": -0.046,
+  "PRES_auroc_within_length_quartile": {
+   "0": {
+    "n_clean": 31,
+    "auroc": 0.966
+   },
+   "1": {
+    "n_clean": 18,
+    "auroc": 0.758
+   },
+   "2": {
+    "n_clean": 24,
+    "auroc": 0.713
+   },
+   "3": {
+    "n_clean": 24,
+    "auroc": 0.933
+   }
+  },
+  "split_half_at_recall_0.9": {
+   "S1": {
+    "recall": 0.898,
+    "fpr_attacked_safe": 0.407,
+    "fpr_clean": 0.387
+   },
+   "C-PRES": {
+    "recall": 0.885,
+    "fpr_attacked_safe": 0.391,
+    "fpr_clean": 0.101
+   },
+   "C-LEN": {
+    "recall": 0.892,
+    "fpr_attacked_safe": 0.402,
+    "fpr_clean": 0.275
+   },
+   "C-PRES-RESID": {
+    "recall": 0.885,
+    "fpr_attacked_safe": 0.391,
+    "fpr_clean": 0.099
+   }
+  },
+  "nested_clean_fpr_by_suite_recall_0.9": {
+   "workspace": {
+    "n_clean": 40,
+    "S1": 0.144,
+    "C-PRES": 0.106
+   },
+   "travel": {
+    "n_clean": 20,
+    "S1": 0.188,
+    "C-PRES": 0.013
+   },
+   "banking": {
+    "n_clean": 16,
+    "S1": 0.516,
+    "C-PRES": 0.406
+   },
+   "slack": {
+    "n_clean": 21,
+    "S1": 0.94,
+    "C-PRES": 0.083
+   }
+  }
+ }
+}

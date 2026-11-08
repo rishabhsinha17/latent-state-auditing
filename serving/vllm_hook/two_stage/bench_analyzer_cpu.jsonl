@@ -1,0 +1,6 @@
+{"analyzer": "tool_call_risk", "batch": 1, "median_ms": 0.023, "p90_ms": 0.025}
+{"analyzer": "two_stage_probe", "batch": 1, "median_ms": 0.059, "p90_ms": 0.064}
+{"analyzer": "tool_call_risk", "batch": 16, "median_ms": 0.121, "p90_ms": 0.15}
+{"analyzer": "two_stage_probe", "batch": 16, "median_ms": 0.311, "p90_ms": 0.352}
+{"analyzer": "tool_call_risk", "batch": 256, "median_ms": 0.877, "p90_ms": 0.957}
+{"analyzer": "two_stage_probe", "batch": 256, "median_ms": 2.099, "p90_ms": 2.354}

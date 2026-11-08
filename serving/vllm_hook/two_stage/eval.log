@@ -1,0 +1,48 @@
+seed 13 fold 0 done in 6s
+seed 13 fold 1 done in 5s
+seed 13 fold 2 done in 6s
+seed 13 fold 3 done in 6s
+seed 13 fold 4 done in 6s
+seed 0 fold 0 done in 6s
+seed 0 fold 1 done in 6s
+seed 0 fold 2 done in 6s
+seed 0 fold 3 done in 6s
+seed 0 fold 4 done in 6s
+seed 1 fold 0 done in 6s
+seed 1 fold 1 done in 6s
+seed 1 fold 2 done in 6s
+seed 1 fold 3 done in 7s
+seed 1 fold 4 done in 6s
+seed 2 fold 0 done in 7s
+seed 2 fold 1 done in 6s
+seed 2 fold 2 done in 6s
+seed 2 fold 3 done in 6s
+seed 2 fold 4 done in 7s
+S1@0.8 {"recall": [0.81, 0.005], "fpr_attacked_safe": [0.227, 0.005], "fpr_clean": [0.204, 0.026], "stage2_rate": [1.0, 0.0]}
+L21@0.8 {"recall": [0.806, 0.021], "fpr_attacked_safe": [0.248, 0.018], "fpr_clean": [0.18, 0.012], "stage2_rate": [1.0, 0.0]}
+AVG@0.8 {"recall": [0.801, 0.009], "fpr_attacked_safe": [0.23, 0.003], "fpr_clean": [0.18, 0.009], "stage2_rate": [1.0, 0.0]}
+C-A@0.8 {"recall": [0.791, 0.011], "fpr_attacked_safe": [0.222, 0.011], "fpr_clean": [0.165, 0.018], "stage2_rate": [0.412, 0.037]}
+C-HN@0.8 {"recall": [0.797, 0.01], "fpr_attacked_safe": [0.226, 0.005], "fpr_clean": [0.198, 0.022], "stage2_rate": [0.385, 0.035]}
+S1@0.9 {"recall": [0.899, 0.01], "fpr_attacked_safe": [0.394, 0.012], "fpr_clean": [0.387, 0.015], "stage2_rate": [1.0, 0.0]}
+L21@0.9 {"recall": [0.896, 0.01], "fpr_attacked_safe": [0.43, 0.054], "fpr_clean": [0.335, 0.038], "stage2_rate": [1.0, 0.0]}
+AVG@0.9 {"recall": [0.902, 0.007], "fpr_attacked_safe": [0.391, 0.023], "fpr_clean": [0.351, 0.022], "stage2_rate": [1.0, 0.0]}
+C-A@0.9 {"recall": [0.883, 0.009], "fpr_attacked_safe": [0.382, 0.023], "fpr_clean": [0.332, 0.034], "stage2_rate": [0.604, 0.061]}
+C-HN@0.9 {"recall": [0.891, 0.009], "fpr_attacked_safe": [0.384, 0.012], "fpr_clean": [0.381, 0.018], "stage2_rate": [0.519, 0.018]}
+S1@0.95 {"recall": [0.952, 0.005], "fpr_attacked_safe": [0.562, 0.024], "fpr_clean": [0.513, 0.034], "stage2_rate": [1.0, 0.0]}
+L21@0.95 {"recall": [0.943, 0.006], "fpr_attacked_safe": [0.661, 0.038], "fpr_clean": [0.575, 0.034], "stage2_rate": [1.0, 0.0]}
+AVG@0.95 {"recall": [0.943, 0.008], "fpr_attacked_safe": [0.516, 0.035], "fpr_clean": [0.461, 0.037], "stage2_rate": [1.0, 0.0]}
+C-A@0.95 {"recall": [0.939, 0.003], "fpr_attacked_safe": [0.535, 0.034], "fpr_clean": [0.477, 0.034], "stage2_rate": [0.698, 0.033]}
+C-HN@0.95 {"recall": [0.936, 0.006], "fpr_attacked_safe": [0.549, 0.022], "fpr_clean": [0.503, 0.03], "stage2_rate": [0.665, 0.043]}
+L21-S1@0.8 {"d_recall": [-0.049, 0.029], "d_fpr_attacked_safe": [-0.012, 0.055], "d_fpr_clean": [-0.085, 0.044]}
+AVG-S1@0.8 {"d_recall": [-0.028, 0.007], "d_fpr_attacked_safe": [-0.017, 0.026], "d_fpr_clean": [-0.072, 0.023]}
+C-A-S1@0.8 {"d_recall": [-0.049, 0.004], "d_fpr_attacked_safe": [-0.02, 0.009], "d_fpr_clean": [-0.08, 0.005]}
+C-HN-S1@0.8 {"d_recall": [-0.027, 0.004], "d_fpr_attacked_safe": [-0.01, 0.008], "d_fpr_clean": [-0.026, 0.018]}
+L21-S1@0.9 {"d_recall": [-0.033, 0.025], "d_fpr_attacked_safe": [-0.008, 0.079], "d_fpr_clean": [-0.126, 0.021]}
+AVG-S1@0.9 {"d_recall": [-0.013, 0.019], "d_fpr_attacked_safe": [-0.027, 0.019], "d_fpr_clean": [-0.077, 0.005]}
+C-A-S1@0.9 {"d_recall": [-0.034, 0.003], "d_fpr_attacked_safe": [-0.031, 0.007], "d_fpr_clean": [-0.095, -0.013]}
+C-HN-S1@0.9 {"d_recall": [-0.016, 0.0], "d_fpr_attacked_safe": [-0.024, 0.001], "d_fpr_clean": [-0.023, 0.013]}
+L21-S1@0.95 {"d_recall": [-0.035, 0.015], "d_fpr_attacked_safe": [0.035, 0.168], "d_fpr_clean": [-0.018, 0.142]}
+AVG-S1@0.95 {"d_recall": [-0.026, 0.008], "d_fpr_attacked_safe": [-0.083, -0.014], "d_fpr_clean": [-0.098, -0.003]}
+C-A-S1@0.95 {"d_recall": [-0.032, 0.0], "d_fpr_attacked_safe": [-0.061, 0.004], "d_fpr_clean": [-0.075, 0.003]}
+C-HN-S1@0.95 {"d_recall": [-0.034, -0.002], "d_fpr_attacked_safe": [-0.031, 0.004], "d_fpr_clean": [-0.031, 0.008]}
+EXIT 0

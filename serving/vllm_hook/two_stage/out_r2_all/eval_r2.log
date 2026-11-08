@@ -1,0 +1,78 @@
+seed 13 fold 0 5s
+seed 13 fold 1 4s
+seed 13 fold 2 5s
+seed 13 fold 3 5s
+seed 13 fold 4 5s
+seed 0 fold 0 5s
+seed 0 fold 1 4s
+seed 0 fold 2 5s
+seed 0 fold 3 5s
+seed 0 fold 4 4s
+seed 1 fold 0 4s
+seed 1 fold 1 5s
+seed 1 fold 2 4s
+seed 1 fold 3 5s
+seed 1 fold 4 4s
+seed 2 fold 0 4s
+seed 2 fold 1 4s
+seed 2 fold 2 4s
+seed 2 fold 3 5s
+seed 2 fold 4 5s
+{"total": 1826, "kept": 1774, "kept_attacked": 1677, "kept_unsafe": 349, "kept_clean": 97, "dropped_not_same_action": 200} {"S1": 0.866, "PRES28": 0.622, "DEC": 0.873, "TOOL": 0.803} {"n": 1826, "cosine_median": 0.99966, "cosine_min": 0.99559, "max_abs_score_shift": 0.1204, "verdict_flips_at_released_threshold": 29, "auroc_attacked_stored": 0.9019, "auroc_attacked_vllm032": 0.9033}
+S1@recall=0.9 {"recall": [0.902, 0.01], "fpr_attacked_safe": [0.404, 0.006], "fpr_clean": [0.399, 0.015], "stage2_rate": [1.0, 0.0]}
+C-PRES28@recall=0.9 {"recall": [0.9, 0.01], "fpr_attacked_safe": [0.401, 0.007], "fpr_clean": [0.137, 0.018], "stage2_rate": [0.512, 0.005]}
+DEC@recall=0.9 {"recall": [0.892, 0.014], "fpr_attacked_safe": [0.321, 0.019], "fpr_clean": [0.381, 0.019], "stage2_rate": [1.0, 0.0]}
+C-DEC@recall=0.9 {"recall": [0.874, 0.008], "fpr_attacked_safe": [0.286, 0.022], "fpr_clean": [0.32, 0.016], "stage2_rate": [0.734, 0.051]}
+C-PD@recall=0.9 {"recall": [0.872, 0.008], "fpr_attacked_safe": [0.282, 0.026], "fpr_clean": [0.222, 0.012], "stage2_rate": [0.737, 0.071]}
+TOOL@recall=0.9 {"recall": [0.96, 0.009], "fpr_attacked_safe": [0.716, 0.051], "fpr_clean": [0.747, 0.042], "stage2_rate": [1.0, 0.0]}
+C-TOOL@recall=0.9 {"recall": [0.89, 0.006], "fpr_attacked_safe": [0.349, 0.014], "fpr_clean": [0.356, 0.024], "stage2_rate": [0.529, 0.013]}
+S1@recall=0.95 {"recall": [0.948, 0.005], "fpr_attacked_safe": [0.579, 0.03], "fpr_clean": [0.541, 0.043], "stage2_rate": [1.0, 0.0]}
+C-PRES28@recall=0.95 {"recall": [0.941, 0.007], "fpr_attacked_safe": [0.57, 0.022], "fpr_clean": [0.216, 0.022], "stage2_rate": [0.664, 0.022]}
+DEC@recall=0.95 {"recall": [0.95, 0.008], "fpr_attacked_safe": [0.54, 0.031], "fpr_clean": [0.608, 0.032], "stage2_rate": [1.0, 0.0]}
+C-DEC@recall=0.95 {"recall": [0.936, 0.019], "fpr_attacked_safe": [0.476, 0.051], "fpr_clean": [0.495, 0.056], "stage2_rate": [0.783, 0.039]}
+C-PD@recall=0.95 {"recall": [0.938, 0.015], "fpr_attacked_safe": [0.466, 0.041], "fpr_clean": [0.389, 0.034], "stage2_rate": [0.764, 0.028]}
+TOOL@recall=0.95 {"recall": [0.966, 0.004], "fpr_attacked_safe": [0.741, 0.019], "fpr_clean": [0.771, 0.017], "stage2_rate": [1.0, 0.0]}
+C-TOOL@recall=0.95 {"recall": [0.931, 0.006], "fpr_attacked_safe": [0.498, 0.022], "fpr_clean": [0.505, 0.035], "stage2_rate": [0.713, 0.031]}
+S1@fpr=0.2 {"recall": [0.798, 0.003], "fpr_attacked_safe": [0.203, 0.005], "fpr_clean": [0.168, 0.018], "stage2_rate": [1.0, 0.0]}
+C-PRES28@fpr=0.2 {"recall": [0.797, 0.007], "fpr_attacked_safe": [0.212, 0.004], "fpr_clean": [0.098, 0.024], "stage2_rate": [0.33, 0.003]}
+DEC@fpr=0.2 {"recall": [0.811, 0.015], "fpr_attacked_safe": [0.2, 0.006], "fpr_clean": [0.24, 0.013], "stage2_rate": [1.0, 0.0]}
+C-DEC@fpr=0.2 {"recall": [0.835, 0.006], "fpr_attacked_safe": [0.198, 0.009], "fpr_clean": [0.229, 0.009], "stage2_rate": [0.62, 0.047]}
+C-PD@fpr=0.2 {"recall": [0.837, 0.014], "fpr_attacked_safe": [0.206, 0.013], "fpr_clean": [0.168, 0.017], "stage2_rate": [0.634, 0.067]}
+TOOL@fpr=0.2 {"recall": [0.72, 0.007], "fpr_attacked_safe": [0.186, 0.015], "fpr_clean": [0.32, 0.013], "stage2_rate": [1.0, 0.0]}
+C-TOOL@fpr=0.2 {"recall": [0.803, 0.006], "fpr_attacked_safe": [0.202, 0.019], "fpr_clean": [0.183, 0.022], "stage2_rate": [0.344, 0.009]}
+C-PRES28-S1@recall=0.9 {"d_recall": [-0.009, 0.004], "d_fpr_attacked_safe": [-0.019, 0.009], "d_fpr_clean": [-0.345, -0.18]}
+C-PRES28-S1@recall=0.95 {"d_recall": [-0.015, 0.0], "d_fpr_attacked_safe": [-0.033, 0.008], "d_fpr_clean": [-0.412, -0.235]}
+C-PRES28-S1@fpr=0.2 {"d_recall": [-0.015, 0.01], "d_fpr_attacked_safe": [0.004, 0.014], "d_fpr_clean": [-0.108, -0.034]}
+DEC-S1@recall=0.9 {"d_recall": [-0.056, 0.046], "d_fpr_attacked_safe": [-0.156, -0.01], "d_fpr_clean": [-0.101, 0.067]}
+DEC-S1@recall=0.95 {"d_recall": [-0.035, 0.044], "d_fpr_attacked_safe": [-0.126, 0.052], "d_fpr_clean": [-0.023, 0.165]}
+DEC-S1@fpr=0.2 {"d_recall": [-0.039, 0.073], "d_fpr_attacked_safe": [-0.057, 0.054], "d_fpr_clean": [0.015, 0.131]}
+C-DEC-S1@recall=0.9 {"d_recall": [-0.063, 0.005], "d_fpr_attacked_safe": [-0.176, -0.062], "d_fpr_clean": [-0.149, -0.013]}
+C-DEC-S1@recall=0.95 {"d_recall": [-0.037, 0.008], "d_fpr_attacked_safe": [-0.168, -0.04], "d_fpr_clean": [-0.113, 0.023]}
+C-DEC-S1@fpr=0.2 {"d_recall": [-0.001, 0.08], "d_fpr_attacked_safe": [-0.051, 0.044], "d_fpr_clean": [0.008, 0.119]}
+C-PD-S1@recall=0.9 {"d_recall": [-0.064, 0.002], "d_fpr_attacked_safe": [-0.184, -0.062], "d_fpr_clean": [-0.253, -0.106]}
+C-PD-S1@recall=0.95 {"d_recall": [-0.034, 0.009], "d_fpr_attacked_safe": [-0.175, -0.053], "d_fpr_clean": [-0.229, -0.067]}
+C-PD-S1@fpr=0.2 {"d_recall": [0.0, 0.082], "d_fpr_attacked_safe": [-0.042, 0.054], "d_fpr_clean": [-0.052, 0.054]}
+TOOL-S1@recall=0.9 {"d_recall": [0.004, 0.125], "d_fpr_attacked_safe": [0.209, 0.416], "d_fpr_clean": [0.24, 0.459]}
+TOOL-S1@recall=0.95 {"d_recall": [-0.02, 0.063], "d_fpr_attacked_safe": [0.052, 0.275], "d_fpr_clean": [0.121, 0.34]}
+TOOL-S1@fpr=0.2 {"d_recall": [-0.171, 0.023], "d_fpr_attacked_safe": [-0.101, 0.069], "d_fpr_clean": [0.072, 0.235]}
+C-TOOL-S1@recall=0.9 {"d_recall": [-0.03, 0.004], "d_fpr_attacked_safe": [-0.099, -0.016], "d_fpr_clean": [-0.088, -0.005]}
+C-TOOL-S1@recall=0.95 {"d_recall": [-0.039, 0.0], "d_fpr_attacked_safe": [-0.14, -0.025], "d_fpr_clean": [-0.098, 0.021]}
+C-TOOL-S1@fpr=0.2 {"d_recall": [-0.011, 0.019], "d_fpr_attacked_safe": [-0.026, 0.021], "d_fpr_clean": [-0.008, 0.039]}
+S1-C-PRES28@recall=0.9 {"d_recall": [-0.004, 0.009], "d_fpr_attacked_safe": [-0.009, 0.019], "d_fpr_clean": [0.18, 0.345]}
+S1-C-PRES28@recall=0.95 {"d_recall": [0.0, 0.015], "d_fpr_attacked_safe": [-0.008, 0.033], "d_fpr_clean": [0.235, 0.412]}
+S1-C-PRES28@fpr=0.2 {"d_recall": [-0.01, 0.015], "d_fpr_attacked_safe": [-0.014, -0.004], "d_fpr_clean": [0.034, 0.108]}
+DEC-C-PRES28@recall=0.9 {"d_recall": [-0.052, 0.046], "d_fpr_attacked_safe": [-0.149, -0.007], "d_fpr_clean": [0.155, 0.332]}
+DEC-C-PRES28@recall=0.95 {"d_recall": [-0.025, 0.051], "d_fpr_attacked_safe": [-0.113, 0.059], "d_fpr_clean": [0.281, 0.5]}
+DEC-C-PRES28@fpr=0.2 {"d_recall": [-0.035, 0.07], "d_fpr_attacked_safe": [-0.066, 0.046], "d_fpr_clean": [0.077, 0.206]}
+C-DEC-C-PRES28@recall=0.9 {"d_recall": [-0.059, 0.006], "d_fpr_attacked_safe": [-0.174, -0.059], "d_fpr_clean": [0.098, 0.271]}
+C-DEC-C-PRES28@recall=0.95 {"d_recall": [-0.029, 0.015], "d_fpr_attacked_safe": [-0.159, -0.031], "d_fpr_clean": [0.175, 0.381]}
+C-DEC-C-PRES28@fpr=0.2 {"d_recall": [0.004, 0.077], "d_fpr_attacked_safe": [-0.06, 0.033], "d_fpr_clean": [0.07, 0.196]}
+C-PD-C-PRES28@recall=0.9 {"d_recall": [-0.06, 0.002], "d_fpr_attacked_safe": [-0.18, -0.062], "d_fpr_clean": [0.013, 0.152]}
+C-PD-C-PRES28@recall=0.95 {"d_recall": [-0.026, 0.015], "d_fpr_attacked_safe": [-0.166, -0.043], "d_fpr_clean": [0.08, 0.273]}
+C-PD-C-PRES28@fpr=0.2 {"d_recall": [0.006, 0.078], "d_fpr_attacked_safe": [-0.051, 0.044], "d_fpr_clean": [0.021, 0.121]}
+TOOL-C-PRES28@recall=0.9 {"d_recall": [0.01, 0.123], "d_fpr_attacked_safe": [0.211, 0.419], "d_fpr_clean": [0.503, 0.706]}
+TOOL-C-PRES28@recall=0.95 {"d_recall": [-0.011, 0.067], "d_fpr_attacked_safe": [0.063, 0.281], "d_fpr_clean": [0.443, 0.662]}
+TOOL-C-PRES28@fpr=0.2 {"d_recall": [-0.168, 0.02], "d_fpr_attacked_safe": [-0.11, 0.059], "d_fpr_clean": [0.134, 0.307]}
+C-TOOL-C-PRES28@recall=0.9 {"d_recall": [-0.025, 0.004], "d_fpr_attacked_safe": [-0.099, -0.009], "d_fpr_clean": [0.126, 0.312]}
+C-TOOL-C-PRES28@recall=0.95 {"d_recall": [-0.03, 0.005], "d_fpr_attacked_safe": [-0.132, -0.009], "d_fpr_clean": [0.191, 0.389]}
+C-TOOL-C-PRES28@fpr=0.2 {"d_recall": [-0.008, 0.019], "d_fpr_attacked_safe": [-0.036, 0.012], "d_fpr_clean": [0.039, 0.131]}

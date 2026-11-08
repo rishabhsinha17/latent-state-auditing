@@ -1,0 +1,23 @@
+seed 13 fold 0 4s
+seed 13 fold 1 3s
+seed 13 fold 2 4s
+seed 13 fold 3 4s
+seed 13 fold 4 4s
+seed 0 fold 0 4s
+seed 0 fold 1 4s
+seed 0 fold 2 4s
+seed 0 fold 3 4s
+seed 0 fold 4 4s
+seed 1 fold 0 4s
+seed 1 fold 1 4s
+seed 1 fold 2 4s
+seed 1 fold 3 4s
+seed 1 fold 4 4s
+seed 2 fold 0 4s
+seed 2 fold 1 4s
+seed 2 fold 2 4s
+seed 2 fold 3 4s
+seed 2 fold 4 4s
+{"C-PD/gate97": {"recall": 0.893, "fpr_attacked_safe": 0.289, "fpr_clean": 0.232}, "C-PD/joint": {"recall": 0.872, "fpr_attacked_safe": 0.271, "fpr_clean": 0.214}, "C-PT/gate97": {"recall": 0.919, "fpr_attacked_safe": 0.454, "fpr_clean": 0.273}, "C-PT/joint": {"recall": 0.898, "fpr_attacked_safe": 0.378, "fpr_clean": 0.242}}
+{"primary C-PD/gate97 - C-PT/gate97": {"d_recall": [-0.058, -0.001], "d_fpr_attacked_safe": [-0.225, -0.103], "d_fpr_clean": [-0.095, 0.018]}, "secondary C-PD/joint - C-PT/joint": {"d_recall": [-0.059, 0.001], "d_fpr_attacked_safe": [-0.162, -0.053], "d_fpr_clean": [-0.077, 0.023]}}
+EXIT 0

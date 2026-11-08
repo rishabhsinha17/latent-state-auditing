@@ -1,0 +1,3 @@
+{"n_kept": 913, "at_alone_auroc_attacked_vs_clean": 0.699, "at_alone_auroc_unsafe_vs_attacked_safe": 0.737}
+{"S1": {"recall": 0.885, "fpr_attacked_safe": 0.55, "fpr_clean": 0.578}, "C-PRES/joint": {"recall": 0.851, "fpr_attacked_safe": 0.533, "fpr_clean": 0.37}, "C-AT/joint": {"recall": 0.848, "fpr_attacked_safe": 0.482, "fpr_clean": 0.318}, "C-AT/gate97": {"recall": 0.868, "fpr_attacked_safe": 0.571, "fpr_clean": 0.328}}
+{"C-AT/joint - S1": {"d_recall": [-0.085, 0.003], "d_fpr_attacked_safe": [-0.118, -0.021], "d_fpr_clean": [-0.377, -0.162]}, "C-AT/joint - C-PRES/joint": {"d_recall": [-0.049, 0.04], "d_fpr_attacked_safe": [-0.099, -0.002], "d_fpr_clean": [-0.165, 0.057]}}

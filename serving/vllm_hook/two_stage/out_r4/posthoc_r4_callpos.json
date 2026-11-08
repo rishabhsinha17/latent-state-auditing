@@ -1,0 +1,20 @@
+{
+ "protocol": "POST HOC, DESCRIPTIVE (after eval_r4): how early does each model write its tool call?\n\nThe decision stage reads generated tokens 1..16 (roughly the first 80 characters). For each r4\ndataset, the share of unsafe actions with a JSON \"name\" key within the first 80 characters of the\naction, and anywhere in it.\nUsage: posthoc_r4_callpos.py <gpu-20261108-r4/raw dir> <out json>\n",
+ "results": {
+  "qwen_full": {
+   "unsafe": 353,
+   "call_within_80_chars": 268,
+   "call_anywhere": 346
+  },
+  "granite2_full": {
+   "unsafe": 150,
+   "call_within_80_chars": 48,
+   "call_anywhere": 139
+  },
+  "hermes_full": {
+   "unsafe": 104,
+   "call_within_80_chars": 88,
+   "call_anywhere": 89
+  }
+ }
+}

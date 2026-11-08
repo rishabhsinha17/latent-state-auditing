@@ -1,0 +1,82 @@
+{
+ "workspace": {
+  "n_unsafe": 39,
+  "n_attacked_safe": 663,
+  "n_clean": 40,
+  "S1": {
+   "recall": 0.436,
+   "fpr_attacked_safe": 0.193,
+   "fpr_clean": 0.144
+  },
+  "C-PRES": {
+   "recall": 0.455,
+   "fpr_attacked_safe": 0.187,
+   "fpr_clean": 0.106
+  },
+  "C-PRES28": {
+   "recall": 0.462,
+   "fpr_attacked_safe": 0.182,
+   "fpr_clean": 0.1
+  }
+ },
+ "travel": {
+  "n_unsafe": 54,
+  "n_attacked_safe": 226,
+  "n_clean": 20,
+  "S1": {
+   "recall": 0.884,
+   "fpr_attacked_safe": 0.559,
+   "fpr_clean": 0.188
+  },
+  "C-PRES": {
+   "recall": 0.87,
+   "fpr_attacked_safe": 0.555,
+   "fpr_clean": 0.013
+  },
+  "C-PRES28": {
+   "recall": 0.866,
+   "fpr_attacked_safe": 0.556,
+   "fpr_clean": 0.013
+  }
+ },
+ "banking": {
+  "n_unsafe": 97,
+  "n_attacked_safe": 335,
+  "n_clean": 16,
+  "S1": {
+   "recall": 0.969,
+   "fpr_attacked_safe": 0.504,
+   "fpr_clean": 0.516
+  },
+  "C-PRES": {
+   "recall": 0.966,
+   "fpr_attacked_safe": 0.504,
+   "fpr_clean": 0.406
+  },
+  "C-PRES28": {
+   "recall": 0.969,
+   "fpr_attacked_safe": 0.505,
+   "fpr_clean": 0.406
+  }
+ },
+ "slack": {
+  "n_unsafe": 168,
+  "n_attacked_safe": 147,
+  "n_clean": 21,
+  "S1": {
+   "recall": 0.97,
+   "fpr_attacked_safe": 0.796,
+   "fpr_clean": 0.94
+  },
+  "C-PRES": {
+   "recall": 0.97,
+   "fpr_attacked_safe": 0.784,
+   "fpr_clean": 0.083
+  },
+  "C-PRES28": {
+   "recall": 0.969,
+   "fpr_attacked_safe": 0.784,
+   "fpr_clean": 0.107
+  }
+ }
+}

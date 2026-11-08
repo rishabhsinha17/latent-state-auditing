@@ -1,0 +1,149 @@
+{
+ "protocol": "POST HOC (after eval_r2 results were seen): is the decision-time stage more than the tool name,\nand how do the r2 cascades split by suite? Reads eval_r2_flags.npz; same kept steps and seeds.\n\nUsage: posthoc_r2.py <chat dir> <dec npz> <out_r2 dir>\n",
+ "paired_95ci_recall0.9": {
+  "C-DEC-C-TOOL": {
+   "d_recall": [
+    -0.044,
+    0.014
+   ],
+   "d_fpr_attacked_safe": [
+    -0.109,
+    0.007
+   ],
+   "d_fpr_clean": [
+    -0.082,
+    0.033
+   ]
+  },
+  "C-PD-C-TOOL": {
+   "d_recall": [
+    -0.043,
+    0.014
+   ],
+   "d_fpr_attacked_safe": [
+    -0.126,
+    -0.004
+   ],
+   "d_fpr_clean": [
+    -0.229,
+    -0.086
+   ]
+  },
+  "DEC-TOOL": {
+   "d_recall": [
+    -0.118,
+    -0.028
+   ],
+   "d_fpr_attacked_safe": [
+    -0.496,
+    -0.306
+   ],
+   "d_fpr_clean": [
+    -0.467,
+    -0.28
+   ]
+  }
+ },
+ "per_suite_recall0.9": {
+  "workspace": {
+   "n_unsafe": 33,
+   "n_attacked_safe": 600,
+   "n_clean": 33,
+   "S1": [
+    0.379,
+    0.239,
+    0.189
+   ],
+   "C-PRES28": [
+    0.379,
+    0.222,
+    0.144
+   ],
+   "C-DEC": [
+    0.402,
+    0.159,
+    0.167
+   ],
+   "C-PD": [
+    0.394,
+    0.13,
+    0.083
+   ]
+  },
+  "travel": {
+   "n_unsafe": 48,
+   "n_attacked_safe": 198,
+   "n_clean": 17,
+   "S1": [
+    0.875,
+    0.558,
+    0.176
+   ],
+   "C-PRES28": [
+    0.854,
+    0.553,
+    0.015
+   ],
+   "C-DEC": [
+    0.781,
+    0.279,
+    0.176
+   ],
+   "C-PD": [
+    0.792,
+    0.293,
+    0.015
+   ]
+  },
+  "banking": {
+   "n_unsafe": 89,
+   "n_attacked_safe": 298,
+   "n_clean": 15,
+   "S1": [
+    0.978,
+    0.522,
+    0.533
+   ],
+   "C-PRES28": [
+    0.966,
+    0.529,
+    0.367
+   ],
+   "C-DEC": [
+    0.983,
+    0.407,
+    0.4
+   ],
+   "C-PD": [
+    0.983,
+    0.402,
+    0.367
+   ]
+  },
+  "slack": {
+   "n_unsafe": 158,
+   "n_attacked_safe": 116,
+   "n_clean": 21,
+   "S1": [
+    0.975,
+    0.836,
+    0.94
+   ],
+   "C-PRES28": [
+    0.967,
+    0.825,
+    0.107
+   ],
+   "C-DEC": [
+    0.951,
+    0.707,
+    0.786
+   ],
+   "C-PD": [
+    0.949,
+    0.69,
+    0.536
+   ]
+  }
+ }
+}

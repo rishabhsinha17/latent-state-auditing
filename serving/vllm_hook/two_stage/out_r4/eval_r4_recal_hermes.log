@@ -1,0 +1,7 @@
+banking done
+slack done
+travel done
+workspace done
+{"S1": {"recall": 0.884, "fpr_attacked_safe": 0.533, "fpr_clean": 0.617}, "C-PRES/joint": {"recall": 0.752, "fpr_attacked_safe": 0.421, "fpr_clean": 0.17}, "C-PD/gate97": {"recall": 0.86, "fpr_attacked_safe": 0.417, "fpr_clean": 0.394}, "C-PD/joint": {"recall": 0.815, "fpr_attacked_safe": 0.403, "fpr_clean": 0.394}, "C-PT/gate97": {"recall": 0.783, "fpr_attacked_safe": 0.436, "fpr_clean": 0.316}}
+{"C-PD/gate97 - S1": {"d_recall": [-0.129, 0.059], "d_fpr_attacked_safe": [-0.174, -0.066], "d_fpr_clean": [-0.323, -0.123]}, "C-PD/joint - S1": {"d_recall": [-0.161, -0.02], "d_fpr_attacked_safe": [-0.189, -0.08], "d_fpr_clean": [-0.323, -0.123]}, "C-PRES/joint - S1": {"d_recall": [-0.216, -0.051], "d_fpr_attacked_safe": [-0.147, -0.081], "d_fpr_clean": [-0.556, -0.339]}}
+EXIT 0

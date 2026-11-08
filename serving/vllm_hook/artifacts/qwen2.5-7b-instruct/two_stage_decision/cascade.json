@@ -1,0 +1,33 @@
+{
+  "stage1": {
+    "probe_path": "stage1/probe.npz",
+    "threshold": 0.0370293917933856
+  },
+  "stage2": {
+    "product": [
+      {
+        "probe_path": "presence/probe.npz"
+      },
+      {
+        "probe_path": "decision/probe.npz"
+      }
+    ],
+    "threshold": 0.09626785779661692
+  },
+  "calibration": {
+    "operating_point": {
+      "stage1_threshold": 0.0370293917933856,
+      "stage2_threshold": 0.09626785779661692,
+      "recall": 0.9025787965616046,
+      "fpr": 0.31087719298245614,
+      "stage2_rate": 0.7440811724915445,
+      "n_pos": 349,
+      "n_neg": 1425
+    },
+    "target_recall": 0.9,
+    "stage1_recall": 0.97,
+    "data": "AgentDojo v1, r3 step set",
+    "split": "grouped 5-fold OOF by user task, seed 13",
+    "held_out_eval": "eval_r3.json detector C-PD/v032/gate97"
+  }
+}

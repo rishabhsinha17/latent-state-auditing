@@ -62,3 +62,7 @@ Capturing one layer adds 0.3% to wall time on this workload. These steps are pre
 ## Reproduce
 
 Everything runs on one 24 GB GPU. `parity/run_pod.sh` installs vLLM 0.21.0 and the vLLM-Hook branch and runs the parity captures. For the probe, build steps in a separate environment with `pip install agentdojo` (`agentdojo/build_suite_steps.py`), then `agentdojo/gen_capture.py` (vLLM-Hook environment), `agentdojo/label_steps.py` (AgentDojo environment) and `agentdojo/fit_chat.py`.
+
+## Two-stage cascade (two_stage/)
+
+`two_stage/` evaluates the `two_stage_probe` analyzer in vLLM-Hook, in which a second scorer runs only on the steps the risk probe flags. Stage 2 is an injection-presence probe on the same capture, or a probe on the decode states of the generated action. It covers Qwen2.5-7B-Instruct, Granite-3.1-8B-Instruct and Hermes-3-Llama-3.1-8B on the AgentDojo steps above, with held-out tool suites, attack templates and injection tasks. `artifacts/qwen2.5-7b-instruct/two_stage/` and `two_stage_decision/` hold the cascades that `examples/demo_two_stage.py` downloads. See `two_stage/README.md` for the rounds, data and reproduction.

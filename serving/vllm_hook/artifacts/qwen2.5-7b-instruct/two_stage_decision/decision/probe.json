@@ -1,0 +1,9 @@
+{
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "layer": 28,
+  "label": "next action follows the injection, read from the generated action",
+  "position": "decode_mean",
+  "decode_tokens": 16,
+  "training_data": "1774 AgentDojo v1 steps (vLLM 0.32 capture, bf16), Qwen2.5 chat template",
+  "note": "no standalone threshold: the cascade thresholds live in cascade.json"
+}

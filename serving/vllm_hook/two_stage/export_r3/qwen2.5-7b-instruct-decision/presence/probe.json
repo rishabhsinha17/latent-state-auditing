@@ -1,0 +1,8 @@
+{
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "layer": 28,
+  "label": "a prompt injection is present in the context",
+  "position": "prompt_last",
+  "training_data": "1774 AgentDojo v1 steps (vLLM 0.32 capture, bf16), Qwen2.5 chat template",
+  "note": "no standalone threshold: the cascade thresholds live in cascade.json"
+}

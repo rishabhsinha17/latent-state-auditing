@@ -1,0 +1,9 @@
+{
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "layer": 28,
+  "threshold": 0.775045,
+  "probe": "pca64",
+  "label": "a prompt injection is present in the context (attacked step vs its clean twin)",
+  "training_data": "1826 AgentDojo v1 agent steps (1729 attacked, 97 clean), Qwen2.5 chat template, vLLM-Hook capture, bf16",
+  "note": "threshold is the cascade stage-2 threshold from cascade.json, not a standalone operating point"
+}
