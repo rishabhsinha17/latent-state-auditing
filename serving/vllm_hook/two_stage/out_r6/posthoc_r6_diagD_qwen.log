@@ -1,0 +1,10 @@
+qwen all_steps seed 13
+qwen all_steps seed 0
+qwen all_steps seed 1
+qwen all_steps seed 2
+qwen all_steps {"seen_unsafe_tool": {"n": 242, "S1": 0.911, "C-PTF/gate97": 0.866, "C-PSPAN/gate97": 0.706, "C-PNAME/gate97": 0.639, "C-PT/gate97": 0.821}, "unseen_unsafe_tool": {"n": 111, "S1": 0.905, "C-PTF/gate97": 0.761, "C-PSPAN/gate97": 0.743, "C-PNAME/gate97": 0.633, "C-PT/gate97": 0.068}}
+qwen calls_only seed 13
+qwen calls_only seed 0
+qwen calls_only seed 1
+qwen calls_only seed 2
+qwen calls_only {"seen_unsafe_tool": {"n": 235, "S1": 0.906, "C-PTF/gate97": 0.876, "C-PSPAN/gate97": 0.784, "C-PNAME/gate97": 0.611, "C-PT/gate97": 0.593}, "unseen_unsafe_tool": {"n": 111, "S1": 0.872, "C-PTF/gate97": 0.734, "C-PSPAN/gate97": 0.304, "C-PNAME/gate97": 0.261, "C-PT/gate97": 0.005}}

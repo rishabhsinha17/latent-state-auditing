@@ -1,0 +1,10 @@
+hermes all_steps seed 13
+hermes all_steps seed 0
+hermes all_steps seed 1
+hermes all_steps seed 2
+hermes all_steps {"seen_unsafe_tool": {"n": 35, "S1": 0.936, "C-PTF/gate97": 0.957, "C-PSPAN/gate97": 0.936, "C-PNAME/gate97": 0.936, "C-PT/gate97": 0.936}, "unseen_unsafe_tool": {"n": 69, "S1": 0.728, "C-PTF/gate97": 0.746, "C-PSPAN/gate97": 0.739, "C-PNAME/gate97": 0.743, "C-PT/gate97": 0.257}}
+hermes calls_only seed 13
+hermes calls_only seed 0
+hermes calls_only seed 1
+hermes calls_only seed 2
+hermes calls_only {"seen_unsafe_tool": {"n": 35, "S1": 0.943, "C-PTF/gate97": 0.693, "C-PSPAN/gate97": 0.85, "C-PNAME/gate97": 0.721, "C-PT/gate97": 0.9}, "unseen_unsafe_tool": {"n": 54, "S1": 0.907, "C-PTF/gate97": 0.528, "C-PSPAN/gate97": 0.741, "C-PNAME/gate97": 0.426, "C-PT/gate97": 0.194}}

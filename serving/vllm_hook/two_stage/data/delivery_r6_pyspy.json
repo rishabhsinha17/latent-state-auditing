@@ -1,0 +1,168 @@
+{
+ "protocol": "GPU (r5): what does reading every request's decode rows cost, with the prefix cache controlled?\n\nThe r3 and r4 benches rotated modes over the same prompts with vLLM's prefix cache on, so the\nfirst mode on each chunk paid the cold prefill and the rest did not (r4 split that 6/6 between\nits two modes). Here every chunk is first run once untimed, so all timed runs are warm, then\ntimed twice per mode in the order off, prefill, decision, decision, prefill, off.\nModes (Qwen2.5-7B-Instruct, layer 28, 17 greedy tokens, the same 12 chunks of 32 steps as r3/r4):\n  off       capture off\n  prefill   capture at prefill, merged probes (what the prompt-only cascade needs)\n  decision  capture at prefill and every decode pass, merge_probes=False, every request's\n            decode_mean feature read (what the decision cascade needs)\nReports per-chunk medians and the median over chunks of each mode's paired difference from off.\nRun once per capture directory (MIA_APERTURE_DIR) to see whether the spill to disk sets the cost.\nUsage (pod): [MIA_APERTURE_DIR=...] bench_delivery_r5.py <chat dir> <out json>\n",
+ "chunk_runs_s": {
+  "off": [
+   [
+    0.978935137973167,
+    1.0290235939901322
+   ],
+   [
+    1.341213125968352,
+    1.0719167199567892
+   ],
+   [
+    1.1486718229716644,
+    1.0477846509893425
+   ],
+   [
+    1.0756317590130493,
+    0.9674135489622131
+   ],
+   [
+    0.9148984990315512,
+    1.1178025330300443
+   ],
+   [
+    1.1058284280006774,
+    1.0255396870197728
+   ],
+   [
+    1.0557370729511604,
+    1.0557239159825258
+   ],
+   [
+    1.0968633230077103,
+    1.1410257929819636
+   ],
+   [
+    1.0720061659812927,
+    0.9735761560150422
+   ],
+   [
+    1.1188489620108157,
+    1.0229031370254233
+   ],
+   [
+    1.0407392149791121,
+    1.1064323169994168
+   ],
+   [
+    1.0585665790131316,
+    1.0657601059647277
+   ]
+  ],
+  "prefill": [
+   [
+    1.5252891080453992,
+    1.542964995955117
+   ],
+   [
+    1.9177421999629587,
+    1.7373657490243204
+   ],
+   [
+    1.6786744929850101,
+    1.572070606984198
+   ],
+   [
+    1.5539623940130696,
+    1.6353554879897274
+   ],
+   [
+    1.4355445149703883,
+    1.5125759789953008
+   ],
+   [
+    1.427136635989882,
+    1.5479136010399088
+   ],
+   [
+    1.4979961669887416,
+    1.77480893896427
+   ],
+   [
+    1.462403871002607,
+    1.5743261530296877
+   ],
+   [
+    1.3894364049774595,
+    1.5664089829660952
+   ],
+   [
+    1.4452132559963502,
+    1.5646413110080175
+   ],
+   [
+    1.5359605280100368,
+    1.2568066690000705
+   ],
+   [
+    1.5892601259984076,
+    1.5552400519954972
+   ]
+  ],
+  "decision": [
+   [
+    2.6826892319950275,
+    3.0706606060266495
+   ],
+   [
+    3.2559035770245828,
+    2.9777799760340713
+   ],
+   [
+    3.1557978409691714,
+    2.901344017009251
+   ],
+   [
+    3.012656180013437,
+    3.267999928968493
+   ],
+   [
+    5.144621474028099,
+    2.7845714690047316
+   ],
+   [
+    3.2579766340204515,
+    2.784696964023169
+   ],
+   [
+    3.136474327999167,
+    2.9810030960361473
+   ],
+   [
+    3.113976021995768,
+    2.7902374190161936
+   ],
+   [
+    3.045805678993929,
+    2.918784174020402
+   ],
+   [
+    3.0529800709919073,
+    2.6931765060289763
+   ],
+   [
+    3.2095302040106617,
+    3.1879472410073504
+   ],
+   [
+    3.0307790630031377,
+    3.304372102022171
+   ]
+  ]
+ },
+ "summary": {
+  "median_s": {
+   "off": 1.0639,
+   "prefill": 1.5262,
+   "decision": 3.0437
+  },
+  "median_paired_diff_from_off_s": {
+   "prefill": 0.4839,
+   "decision": 1.9576
+  },
+  "aperture_dir": "./hs_aperture_dump (default)",
+  "gpu": "NVIDIA A40"
+ }
+}

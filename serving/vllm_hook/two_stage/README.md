@@ -23,6 +23,7 @@ module is vendored at `vendor/mia/utils/two_stage/cascade.py`, identical to vLLM
 | r3 | Same on vLLM 0.32 features, fixed-gate calibration, tool-name control | eval_r3.py, eval_r3b.py, posthoc_r3b.py, export_r3.py | out_r3/, out_r3b/, export_r3/ |
 | r4 | Three models (Qwen2.5-7B, Granite-3.1-8B, Hermes-3-Llama-3.1-8B), held-out suites and attack templates, Attention Tracker as stage 2 | gen_capture_r4.py, label_steps_r4.py, eval_r4.py, eval_r4_recal.py, attn_tracker_r4.py, eval_r4_at.py, posthoc_r4_callpos.py | out_r4/ |
 | r5 | Decision stage read at the tool call instead of the first tokens, a call-only rule as baseline, held-out injection tasks | tf_capture_r5.py, eval_r5.py, summarize_r5.py, e2e_window_r5.py | out_r5/ |
+| r6 | Why the decision stage loses recall on held-out injection tasks: tool-residualized and value-masked windows, an untrained provenance rule, AgentDojo v1.2's new injection tasks | posthoc_r6_diagD.py, eval_r6a.py, eval_r6b.py, r6lib.py, tf_capture_r6.py, build_steps_r6_v12.py, label_steps_r6.py, summarize_r6.py | out_r6/ |
 
 GPU benchmarks and end-to-end checks: bench_gpu.py, bench_decision_gpu.py, bench_collect_gpu.py,
 bench_poll_gpu.py, bench_delivery_r4.py, e2e_cascade_gpu.py, e2e_decision_gpu.py,

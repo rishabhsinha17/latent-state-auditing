@@ -1,0 +1,10 @@
+granite all_steps seed 13
+granite all_steps seed 0
+granite all_steps seed 1
+granite all_steps seed 2
+granite all_steps {"seen_unsafe_tool": {"n": 107, "S1": 0.841, "C-PTF/gate97": 0.862, "C-PSPAN/gate97": 0.806, "C-PNAME/gate97": 0.745, "C-PT/gate97": 0.85}, "unseen_unsafe_tool": {"n": 43, "S1": 0.953, "C-PTF/gate97": 0.965, "C-PSPAN/gate97": 0.942, "C-PNAME/gate97": 0.971, "C-PT/gate97": 0.797}}
+granite calls_only seed 13
+granite calls_only seed 0
+granite calls_only seed 1
+granite calls_only seed 2
+granite calls_only {"seen_unsafe_tool": {"n": 96, "S1": 0.878, "C-PTF/gate97": 0.885, "C-PSPAN/gate97": 0.862, "C-PNAME/gate97": 0.849, "C-PT/gate97": 0.878}, "unseen_unsafe_tool": {"n": 43, "S1": 0.872, "C-PTF/gate97": 0.948, "C-PSPAN/gate97": 0.791, "C-PNAME/gate97": 0.465, "C-PT/gate97": 0.355}}
