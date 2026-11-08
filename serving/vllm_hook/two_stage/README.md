@@ -26,6 +26,7 @@ module is vendored at `vendor/mia/utils/two_stage/cascade.py`, identical to vLLM
 | r6 | Why the decision stage loses recall on held-out injection tasks: tool-residualized and value-masked windows, an untrained provenance rule, AgentDojo v1.2's new injection tasks | posthoc_r6_diagD.py, eval_r6a.py, eval_r6b.py, r6lib.py, tf_capture_r6.py, build_steps_r6_v12.py, label_steps_r6.py, summarize_r6.py | out_r6/ |
 | r7 | Does goal diversity make the decision stage generalize? InjecAgent's 62 goals as a scaling test, and InjecAgent added to AgentDojo training | build_steps_r7_injecagent.py, label_steps_r7.py, eval_r7.py, posthoc_r7_safecalls.py, summarize_r7.py | out_r7/ |
 | r8 | A training-free decision stage from attention: the share of attention on tool outputs against the user's request while the call is written | attn_prov_r8.py, eval_r8.py, posthoc_r8_length.py | out_r8/ |
+| r9 | False alarms on clean steps at every depth of each task (337 more per model), cross-fitted by user task | build_steps_r9_cleandepth.py, eval_r9.py | out_r9/ |
 
 GPU benchmarks and end-to-end checks: bench_gpu.py, bench_decision_gpu.py, bench_collect_gpu.py,
 bench_poll_gpu.py, bench_delivery_r4.py, e2e_cascade_gpu.py, e2e_decision_gpu.py,

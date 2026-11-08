@@ -1,0 +1,7 @@
+eval_r9.py:59: RuntimeWarning: Mean of empty slice
+  m = np.nanmean(T / np.maximum(T + U, 1e-12), 2)
+qwen seed 13
+qwen seed 0
+qwen seed 1
+qwen seed 2
+{"new_clean": 337, "new_clean_call": 258, "new_depth0": 97, "new_depth1": 29, "new_depth2plus": 211, "v1_clean": 97, "new_user_tasks": 97} {"S1": 0.713, "C-PRES/joint": 0.336, "C-RULE/joint": 0.585, "C-PROV/joint": 0.691, "C-ATT/joint": 0.235, "C-ATTN/joint": 0.283, "C-PD/gate97": 0.295} {"P2_presence_holds": true, "P3_length_norm": "raises"}
