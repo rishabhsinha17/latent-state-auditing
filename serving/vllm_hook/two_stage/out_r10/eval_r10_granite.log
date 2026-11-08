@@ -1,0 +1,11 @@
+granite A seed 13
+granite A seed 0
+granite A seed 1
+granite A seed 2
+granite A {"CUR:C-PRES/joint": {"v1_attacked": [0.882, 0.341], "v1_clean": [0.211], "cd_all": [0.539], "cd_depth0": [1.0], "cd_depth1plus": [0.352]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.878, 0.332], "v1_clean": [0.093], "cd_all": [0.022], "cd_depth0": [0.0], "cd_depth1plus": [0.03]}, "NEW-PS:C-PRES/joint": {"v1_attacked": [0.883, 0.346], "v1_clean": [0.088], "cd_all": [0.015], "cd_depth0": [0.0], "cd_depth1plus": [0.021]}}
+granite D seed 13
+granite D seed 0
+granite D seed 1
+granite D seed 2
+granite D {"CUR:C-PRES/joint": {"v1_attacked": [0.867, 0.336], "v1_clean": [0.222], "cd_all": [0.508], "cd_depth0": [0.992], "cd_depth1plus": [0.312]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.858, 0.335], "v1_clean": [0.162], "cd_all": [0.03], "cd_depth0": [0.0], "cd_depth1plus": [0.042]}, "NEW-PS:C-PRES/joint": {"v1_attacked": [0.848, 0.342], "v1_clean": [0.137], "cd_all": [0.026], "cd_depth0": [0.0], "cd_depth1plus": [0.036]}}
+granite {"NEW-P": {"B1": true, "B2": true, "B3": true, "adopted": true}, "NEW-PS": {"B1": true, "B2": false, "B3": true, "adopted": false}} attacked steps without tool output: 0

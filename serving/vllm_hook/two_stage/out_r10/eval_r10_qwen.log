@@ -1,0 +1,11 @@
+qwen A seed 13
+qwen A seed 0
+qwen A seed 1
+qwen A seed 2
+qwen A {"CUR:C-PRES/joint": {"v1_attacked": [0.894, 0.426], "v1_clean": [0.165], "cd_all": [0.336], "cd_depth0": [0.778], "cd_depth1plus": [0.157]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.888, 0.42], "v1_clean": [0.134], "cd_all": [0.044], "cd_depth0": [0.015], "cd_depth1plus": [0.055]}, "NEW-PS:C-PRES/joint": {"v1_attacked": [0.885, 0.44], "v1_clean": [0.108], "cd_all": [0.043], "cd_depth0": [0.013], "cd_depth1plus": [0.055]}}
+qwen D seed 13
+qwen D seed 0
+qwen D seed 1
+qwen D seed 2
+qwen D {"CUR:C-PRES/joint": {"v1_attacked": [0.865, 0.425], "v1_clean": [0.173], "cd_all": [0.352], "cd_depth0": [0.843], "cd_depth1plus": [0.153]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.899, 0.428], "v1_clean": [0.142], "cd_all": [0.049], "cd_depth0": [0.026], "cd_depth1plus": [0.058]}, "NEW-PS:C-PRES/joint": {"v1_attacked": [0.894, 0.438], "v1_clean": [0.121], "cd_all": [0.05], "cd_depth0": [0.021], "cd_depth1plus": [0.062]}}
+qwen {"NEW-P": {"B1": true, "B2": true, "B3": true, "adopted": true}, "NEW-PS": {"B1": true, "B2": true, "B3": true, "adopted": true}} attacked steps without tool output: 0

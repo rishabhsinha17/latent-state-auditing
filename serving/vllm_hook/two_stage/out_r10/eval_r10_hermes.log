@@ -1,0 +1,11 @@
+hermes A seed 13
+hermes A seed 0
+hermes A seed 1
+hermes A seed 2
+hermes A {"CUR:C-PRES/joint": {"v1_attacked": [0.865, 0.329], "v1_clean": [0.144], "cd_all": [0.433], "cd_depth0": [0.933], "cd_depth1plus": [0.231]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.861, 0.347], "v1_clean": [0.211], "cd_all": [0.107], "cd_depth0": [0.036], "cd_depth1plus": [0.135]}, "NEW-PS:C-PRES/joint": {"v1_attacked": [0.858, 0.396], "v1_clean": [0.178], "cd_all": [0.063], "cd_depth0": [0.013], "cd_depth1plus": [0.083]}}
+hermes D seed 13
+hermes D seed 0
+hermes D seed 1
+hermes D seed 2
+hermes D {"CUR:C-PRES/joint": {"v1_attacked": [0.704, 0.324], "v1_clean": [0.237], "cd_all": [0.484], "cd_depth0": [0.938], "cd_depth1plus": [0.3]}, "NEW-P:C-PRES/joint": {"v1_attacked": [0.762, 0.347], "v1_clean": [0.273], "cd_all": [0.126], "cd_depth0": [0.044], "cd_depth1plus": [0.159]}, "NEW-PS:C-PRES/joint": {"v1_attacked": [0.776, 0.392], "v1_clean": [0.255], "cd_all": [0.088], "cd_depth0": [0.013], "cd_depth1plus": [0.119]}}
+hermes {"NEW-P": {"B1": true, "B2": false, "B3": false, "adopted": false}, "NEW-PS": {"B1": true, "B2": false, "B3": false, "adopted": false}} attacked steps without tool output: 0
