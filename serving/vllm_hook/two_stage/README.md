@@ -32,6 +32,7 @@ module is vendored at `vendor/mia/utils/two_stage/cascade.py`, identical to vLLM
 | r12 | Two fixes for the recall lost after arrival (sticky presence with the released and the retrained probe), tested on two unused AgentDojo templates against a cost bar; the decision-time cascade after arrival; a one-pass reading at assistant-turn headers | build_steps_r12_templates.py, tok_prefix_r12.py, eval_r12.py, hs_boundary_r12.py, boundary_r12.py | out_r12/ |
 | r13 | Model-driven AgentDojo rollouts (the model's own calls and real outputs, clean and attacked) as fresh clean traffic and after-arrival steps; the decision-time cascade as a candidate default | env_r13.py, rollout_r13.py, label_steps_r13.py, eval_r13.py | out_r13/ |
 | r14 | A presence probe for each tool output (label: the latest output carries the injection), maximized over the task with thresholds calibrated on that maximum; new tool_knowledge rollouts | eval_r14.py | out_r14/ |
+| r15 | Clean false alarms on another benchmark: 1,201 ToolACE steps (recorded tool outputs, no injection), detectors trained on AgentDojo | build_steps_r15_toolace.py, eval_r15.py | out_r15/ |
 
 GPU benchmarks and end-to-end checks: bench_gpu.py, bench_decision_gpu.py, bench_collect_gpu.py,
 bench_poll_gpu.py, bench_delivery_r4.py, e2e_cascade_gpu.py, e2e_decision_gpu.py,

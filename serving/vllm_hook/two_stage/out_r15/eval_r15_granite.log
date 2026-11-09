@@ -1,0 +1,6 @@
+granite seed 13
+granite seed 0
+granite seed 1
+granite seed 2
+granite {"n_toolace_steps": 1201, "toolace_fpr": {"S1": 0.153, "CUR": 0.047, "PD": 0.167}, "v1_clean_fpr_split_A": {"S1": 0.345, "CUR": 0.211, "PD": 0.379}, "tests": {"X1": "holds"}}
+EXIT 0

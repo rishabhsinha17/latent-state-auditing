@@ -1,0 +1,6 @@
+qwen seed 13
+qwen seed 0
+qwen seed 1
+qwen seed 2
+qwen {"n_toolace_steps": 1201, "toolace_fpr": {"S1": 0.484, "CUR": 0.12, "PD": 0.213}, "v1_clean_fpr_split_A": {"S1": 0.405, "CUR": 0.165, "PD": 0.26}, "tests": {"X1": "holds"}}
+EXIT 0

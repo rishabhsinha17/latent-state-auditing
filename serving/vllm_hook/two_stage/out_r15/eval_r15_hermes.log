@@ -1,0 +1,6 @@
+hermes seed 13
+hermes seed 0
+hermes seed 1
+hermes seed 2
+hermes {"n_toolace_steps": 1201, "toolace_fpr": {"S1": 0.387, "CUR": 0.059, "PD": 0.008}, "v1_clean_fpr_split_A": {"S1": 0.371, "CUR": 0.144, "PD": 0.137}, "tests": {"X1": "holds"}}
+EXIT 0
