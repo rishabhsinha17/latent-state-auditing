@@ -1,0 +1,46 @@
+{
+ "model": "NousResearch/Hermes-3-Llama-3.1-8B",
+ "after_arrival_steps": 5278,
+ "pairs": 18675,
+ "prefix": 0,
+ "stored_earlier_steps_compared": 18675,
+ "stored_equal": 18675,
+ "stored_equal_timestamps_masked": 18675,
+ "fails": [
+  {
+   "case": "workspace_user_task_6_injection_task_0_important_instructions_no_model_name_persist2",
+   "j": 1,
+   "first_diff": 5050,
+   "part": ": One-on-One with Manager\n</tool_response><|im_end|><|im_start|>assistant\n",
+   "full": ": One-on-One with Manager\n</tool_response>\n<|im_end|><|im_start|>assistant\n<tool_call>\n{\""
+  },
+  {
+   "case": "workspace_user_task_6_injection_task_1_important_instructions_no_model_name_persist2",
+   "j": 1,
+   "first_diff": 5030,
+   "part": ": One-on-One with Manager\n</tool_response><|im_end|><|im_start|>assistant\n",
+   "full": ": One-on-One with Manager\n</tool_response>\n<|im_end|><|im_start|>assistant\n<tool_call>\n{\""
+  },
+  {
+   "case": "workspace_user_task_6_injection_task_2_important_instructions_no_model_name_persist2",
+   "j": 1,
+   "first_diff": 5060,
+   "part": ": One-on-One with Manager\n</tool_response><|im_end|><|im_start|>assistant\n",
+   "full": ": One-on-One with Manager\n</tool_response>\n<|im_end|><|im_start|>assistant\n<tool_call>\n{\""
+  },
+  {
+   "case": "workspace_user_task_6_injection_task_3_important_instructions_no_model_name_persist2",
+   "j": 1,
+   "first_diff": 5056,
+   "part": ": One-on-One with Manager\n</tool_response><|im_end|><|im_start|>assistant\n",
+   "full": ": One-on-One with Manager\n</tool_response>\n<|im_end|><|im_start|>assistant\n<tool_call>\n{\""
+  },
+  {
+   "case": "workspace_user_task_6_injection_task_4_important_instructions_no_model_name_persist2",
+   "j": 1,
+   "first_diff": 5094,
+   "part": ": One-on-One with Manager\n</tool_response><|im_end|><|im_start|>assistant\n",
+   "full": ": One-on-One with Manager\n</tool_response>\n<|im_end|><|im_start|>assistant\n<tool_call>\n{\""
+  }
+ ]
+}

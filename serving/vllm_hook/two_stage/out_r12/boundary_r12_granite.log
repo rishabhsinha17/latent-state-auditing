@@ -1,0 +1,2 @@
+granite {"tag": "granite", "t2": 0.5467949648779461, "earlier_headers": {"n": 165, "cos_median": 0.99959, "cos_min": 0.99802, "abs_dpres_median": 0.0043, "abs_dpres_p95": 0.0164, "abs_dpres_max": 0.0201, "share_within_0.05": 1.0}, "own_step": {"n": 40, "cos_median": 0.99962, "cos_min": 0.99914, "abs_dpres_median": 0.0045, "abs_dpres_p95": 0.0124, "abs_dpres_max": 0.0175, "share_within_0.05": 1.0}, "sticky_pass_flips": 0, "steps": 40, "E1": "reproduces"}
+EXIT 0

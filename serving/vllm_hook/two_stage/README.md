@@ -29,6 +29,7 @@ module is vendored at `vendor/mia/utils/two_stage/cascade.py`, identical to vLLM
 | r9 | False alarms on clean steps at every depth of each task (337 more per model), cross-fitted by user task | build_steps_r9_cleandepth.py, eval_r9.py | out_r9/ |
 | r10 | Retraining the presence probe and calibration (and, separately, the risk probe) with those clean steps as negatives, against the current recipe | eval_r10.py | out_r10/ |
 | r11 | Attacked steps after the one where the injection arrives (2,994 per model): does r10's gain come from the depth layout, and does the released cascade keep its recall there? | build_steps_r11_persist.py, eval_r11.py, posthoc_r11_sticky.py | out_r11/ |
+| r12 | Two fixes for the recall lost after arrival (sticky presence with the released and the retrained probe), tested on two unused AgentDojo templates against a cost bar; the decision-time cascade after arrival; a one-pass reading at assistant-turn headers | build_steps_r12_templates.py, tok_prefix_r12.py, eval_r12.py, hs_boundary_r12.py, boundary_r12.py | out_r12/ |
 
 GPU benchmarks and end-to-end checks: bench_gpu.py, bench_decision_gpu.py, bench_collect_gpu.py,
 bench_poll_gpu.py, bench_delivery_r4.py, e2e_cascade_gpu.py, e2e_decision_gpu.py,

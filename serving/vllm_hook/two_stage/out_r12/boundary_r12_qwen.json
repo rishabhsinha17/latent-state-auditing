@@ -1,0 +1,26 @@
+{
+ "protocol": "r12 (CPU): does one forward pass give the same presence scores as the separately captured steps?\n\nPRE-SPECIFIED with eval_r12.py, before any r12 capture existed. Inputs: hs_boundary_r12.py's rows\n(one pass per sampled after-arrival step, the state at each assistant-turn header) and the stored\nprompt states of the same trajectories' steps (r12 capture for the arrival step and later; r9\nclean-depth capture before arrival). The presence probe and its threshold are CUR's, fit on every\nkept v1 step with thresholds from 5 inner folds by user task (seed 1013). For each header t >= 1:\ncosine of the two states, and the change in presence score. Header t = d is the step's own state\n(the two captures differ only by batching and chunking), the baseline for numerical noise.\nE1 (per model): \"one pass reproduces the stored scores\" if |change in presence score| <= 0.05 on at\nleast 95% of the headers t = 1 .. d-1. Also reported: how often the sticky maximum over t = 1 .. d\npasses the presence threshold in one reading but not the other.\nUsage: boundary_r12.py <layer> <tag> <out json> <cascade.py> <v1 chat> <r4 npz> <v1 texts> <v1 labels>\n       <cd chat> <cd npz> <r12 chat> <r12 npz> <boundary npz>\n",
+ "tag": "qwen",
+ "t2": 0.5814155154828987,
+ "earlier_headers": {
+  "n": 165,
+  "cos_median": 0.99978,
+  "cos_min": 0.99684,
+  "abs_dpres_median": 0.0059,
+  "abs_dpres_p95": 0.0223,
+  "abs_dpres_max": 0.0298,
+  "share_within_0.05": 1.0
+ },
+ "own_step": {
+  "n": 40,
+  "cos_median": 0.9997,
+  "cos_min": 0.99898,
+  "abs_dpres_median": 0.0061,
+  "abs_dpres_p95": 0.0327,
+  "abs_dpres_max": 0.0458,
+  "share_within_0.05": 1.0
+ },
+ "sticky_pass_flips": 1,
+ "steps": 40,
+ "E1": "reproduces"
+}

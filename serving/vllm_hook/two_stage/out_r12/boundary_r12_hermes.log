@@ -1,0 +1,2 @@
+hermes {"tag": "hermes", "t2": 0.7473509540802717, "earlier_headers": {"n": 165, "cos_median": 0.96907, "cos_min": 0.83972, "abs_dpres_median": 0.031, "abs_dpres_p95": 0.1691, "abs_dpres_max": 0.32, "share_within_0.05": 0.691}, "own_step": {"n": 40, "cos_median": 0.99941, "cos_min": 0.99731, "abs_dpres_median": 0.0045, "abs_dpres_p95": 0.0121, "abs_dpres_max": 0.0372, "share_within_0.05": 1.0}, "sticky_pass_flips": 0, "steps": 40, "E1": "does not reproduce"}
+EXIT 0

@@ -1,0 +1,10 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "after_arrival_steps": 5278,
+ "pairs": 18675,
+ "prefix": 18675,
+ "stored_earlier_steps_compared": 18675,
+ "stored_equal": 18675,
+ "stored_equal_timestamps_masked": 18675,
+ "fails": []
+}
