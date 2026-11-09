@@ -1,0 +1,16 @@
+hermes A seed 13
+hermes A seed 0
+hermes A seed 1
+hermes A seed 2
+eval_r14.py:257: RuntimeWarning: Mean of empty slice
+  summ = {n: {s: [round(float(x), 3) for x in np.nanmean([metric(fs[n].astype(float), s) for fs in flagsets], 0)] for s in SUB}
+<local> RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+hermes A {"S1": {"NA": [0.847, 0.382], "NP": [0.91, 0.78], "V1C": [0.371], "CD1": [0.721], "RC": [0.25], "R14A": [0.667, 0.307]}, "CUR": {"NA": [0.761, 0.279], "NP": [0.625, 0.353], "V1C": [0.144], "CD1": [0.231], "RC": [0.148], "R14A": [0.5, 0.243]}, "CUR-K": {"NA": [0.776, 0.294], "NP": [0.875, 0.66], "V1C": [0.206], "CD1": [0.407], "RC": [0.154], "R14A": [0.5, 0.255]}, "PO": {"NA": [0.854, 0.431], "NP": [0.818, 0.598], "V1C": [0.42], "CD1": [0.528], "RC": [0.281], "R14A": [0.667, 0.346]}, "PO-K": {"NA": [0.787, 0.342], "NP": [0.877, 0.725], "V1C": [0.294], "CD1": [0.505], "RC": [0.208], "R14A": [0.667, 0.295]}, "CUR-Kc": {"NA": [0.75, 0.246], "NP": [0.827, 0.591], "V1C": [0.131], "CD1": [0.321], "RC": [0.107], "R14A": [0.417, 0.219]}}
+hermes D seed 13
+hermes D seed 0
+hermes D seed 1
+hermes D seed 2
+hermes D {"S1": {"NA": [0.821, 0.371], "NP": [0.87, 0.728], "V1C": [0.374], "CD1": [0.701], "RC": [0.263], "R14A": [0.667, 0.321]}, "CUR": {"NA": [0.694, 0.255], "NP": [0.52, 0.286], "V1C": [0.237], "CD1": [0.3], "RC": [0.182], "R14A": [0.417, 0.228]}, "CUR-K": {"NA": [0.698, 0.257], "NP": [0.772, 0.542], "V1C": [0.291], "CD1": [0.483], "RC": [0.195], "R14A": [0.417, 0.24]}, "PO": {"NA": [0.821, 0.388], "NP": [0.76, 0.558], "V1C": [0.392], "CD1": [0.517], "RC": [0.25], "R14A": [0.667, 0.311]}, "PO-K": {"NA": [0.787, 0.321], "NP": [0.828, 0.652], "V1C": [0.294], "CD1": [0.483], "RC": [0.195], "R14A": [0.667, 0.286]}, "CUR-Kc": {"NA": [0.705, 0.236], "NP": [0.8, 0.531], "V1C": [0.204], "CD1": [0.397], "RC": [0.151], "R14A": [0.417, 0.214]}}
+hermes {"NA": 67, "NP": 100, "V1A": 104, "PS": 120, "RA": 4, "R14A": 3, "R14A_after": 0} {"PO-K": {"R1": false, "R1D": false, "R2": false, "C1": false, "C2": false, "R3": "untestable", "adopted": false}, "CUR-Kc": {"R1": false, "R1D": false, "R2": true, "C1": false, "C2": true, "R3": "untestable", "adopted": false}}
+EXIT 0
