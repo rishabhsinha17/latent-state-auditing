@@ -1,4 +1,4 @@
-"""Export the decision-time cascade evaluated in r3 as C-PD/v032/gate97 (local, NOT published).
+"""Export the decision-time cascade evaluated in r3 as C-PD/v032/gate97 (published as ../artifacts/qwen2.5-7b-instruct/two_stage_decision/, which examples/demo_two_stage.py --decision downloads).
 
 stage1   risk probe, layer 28 last prompt token, PCA-32 + logistic on attacked steps
 stage2   product of

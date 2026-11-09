@@ -1,4 +1,4 @@
-"""Export a local two-stage cascade for Qwen2.5-7B-Instruct (NOT published).
+"""Export a local two-stage cascade for Qwen2.5-7B-Instruct (published as ../artifacts/qwen2.5-7b-instruct/two_stage/, which examples/demo_two_stage.py downloads).
 
 stage1  the released tool-call risk probe (../export/probe.npz, copied unchanged)
 stage2  injection-presence probe on layer 28 (PCA-64 + logistic, attack present vs clean,
