@@ -1,0 +1,16 @@
+hermes A seed 13
+hermes A seed 0
+hermes A seed 1
+hermes A seed 2
+eval_r13.py:226: RuntimeWarning: Mean of empty slice
+  summ = {n: {s: [round(float(x), 3) for x in np.nanmean([metric(fs[n].astype(float), s) for fs in flagsets], 0)] for s in SUB}
+<local> RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+hermes A {"S1": {"RC": [0.25], "RA_arr": [0.5, 0.301], "RA_after": [NaN, 0.544], "V1A": [0.904, 0.347], "GT_after": [0.913, 0.777]}, "CUR": {"RC": [0.148], "RA_arr": [0.5, 0.288], "RA_after": [NaN, 0.375], "V1A": [0.865, 0.329], "GT_after": [0.657, 0.425]}, "PD": {"RC": [0.102], "RA_arr": [0.5, 0.081], "RA_after": [NaN, 0.176], "V1A": [0.901, 0.144], "GT_after": [0.876, 0.25]}, "CUR-K": {"RC": [0.154], "RA_arr": [0.5, 0.288], "RA_after": [NaN, 0.551], "V1A": [0.868, 0.331], "GT_after": [0.889, 0.715]}, "PD-K": {"RC": [0.102], "RA_arr": [0.5, 0.081], "RA_after": [NaN, 0.176], "V1A": [0.901, 0.145], "GT_after": [0.887, 0.28]}}
+hermes D seed 13
+hermes D seed 0
+hermes D seed 1
+hermes D seed 2
+hermes D {"S1": {"RC": [0.263], "RA_arr": [0.5, 0.288], "RA_after": [NaN, 0.596], "V1A": [0.798, 0.348], "GT_after": [0.819, 0.734]}, "CUR": {"RC": [0.182], "RA_arr": [0.5, 0.268], "RA_after": [NaN, 0.404], "V1A": [0.704, 0.324], "GT_after": [0.514, 0.345]}, "PD": {"RC": [0.112], "RA_arr": [0.438, 0.062], "RA_after": [NaN, 0.176], "V1A": [0.817, 0.121], "GT_after": [0.797, 0.22]}}
+hermes {"RA": 4, "RA_arr": 4, "RA_after": 0, "V1A": 104, "PS": 120, "NA": 67, "NP": 100, "GT_after": 220} {"RC": 96, "RA": 283, "RA_arr": 249, "RA_after": 34, "V1A": 1729, "V1C": 97, "CD1": 240, "PS": 2958, "NA": 1258, "NP": 2260, "GT_after": 5218} {"F1": "holds", "F2_after": "inconclusive", "F2_arrival": "holds", "PD": {"B1": true, "B2": true, "B3": {"V1A": true, "GT_after": false, "RA": false}, "adopted": false}}
+EXIT 0

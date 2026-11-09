@@ -29,3 +29,14 @@ Inputs: the r4 v1, r9 clean-depth and r11 later-depth captures and labels (md5s 
 | gen_nw_hermes.labels.jsonl | `label_steps_r4.py` | 9644c05cb5766c929a14f318780dc5f3 |
 
 Labeler control: an empty action on every r12 step gives 0 strict and 0 follows.
+
+## Test outcomes (correction)
+
+The message of commit 51d84a0 lists the failed criteria incompletely: for Hermes, NEW-P-K also fails
+R1 and C2, not only C1. The full outcomes from `eval_r12_<model>.json`, "tests":
+
+| Model | CUR-K | NEW-P-K | D1 (NP / PS) |
+|---|---|---|---|
+| qwen | fails C1 | fails C1 | inconclusive / inconclusive |
+| granite | fails R1, C1, C2 | fails R1, R2 | inconclusive / loses |
+| hermes | fails R1, C1 | fails R1, C1, C2 | inconclusive / inconclusive |

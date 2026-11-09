@@ -10,7 +10,8 @@ attacked steps (../chat) and the r11 later-depth steps (../chat_persist). They m
 for two things AgentDojo's tools put in their outputs: the wall-clock time that file-editing tools
 write as last_modified (the build time) and the order of some set-valued lists, which follows
 Python's string hashing. --check reports both the exact matches and the matches with those masked.
-Run with PYTHONHASHSEED=0 (the r12 build did).
+The r12 build was run as `PYTHONHASHSEED=0 python -I ...`, but -I ignores every PYTHON* variable, so hash
+randomization was on and that list order is not reproducible bit for bit (correction made in r13).
 Usage: python -I build_steps_r12_templates.py <v1 chat dir> <persist chat dir> <out dir> [--check]
 """
 import collections

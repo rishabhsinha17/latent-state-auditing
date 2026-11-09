@@ -1,0 +1,12 @@
+granite A seed 13
+granite A seed 0
+granite A seed 1
+granite A seed 2
+granite A {"S1": {"RC": [0.107], "RA_arr": [0.333, 0.086], "RA_after": [0.5, 0.314], "V1A": [0.893, 0.346], "GT_after": [0.751, 0.493]}, "CUR": {"RC": [0.104], "RA_arr": [0.333, 0.088], "RA_after": [0.0, 0.314], "V1A": [0.882, 0.341], "GT_after": [0.543, 0.345]}, "PD": {"RC": [0.318], "RA_arr": [0.5, 0.245], "RA_after": [0.75, 0.5], "V1A": [0.893, 0.439], "GT_after": [0.651, 0.413]}, "CUR-K": {"RC": [0.104], "RA_arr": [0.333, 0.088], "RA_after": [0.5, 0.314], "V1A": [0.892, 0.35], "GT_after": [0.744, 0.49]}, "PD-K": {"RC": [0.32], "RA_arr": [0.5, 0.245], "RA_after": [1.0, 0.507], "V1A": [0.893, 0.44], "GT_after": [0.733, 0.499]}}
+granite D seed 13
+granite D seed 0
+granite D seed 1
+granite D seed 2
+granite D {"S1": {"RC": [0.167], "RA_arr": [0.333, 0.152], "RA_after": [0.5, 0.436], "V1A": [0.873, 0.349], "GT_after": [0.741, 0.509]}, "CUR": {"RC": [0.17], "RA_arr": [0.333, 0.161], "RA_after": [0.0, 0.443], "V1A": [0.867, 0.336], "GT_after": [0.431, 0.237]}, "PD": {"RC": [0.303], "RA_arr": [0.667, 0.289], "RA_after": [0.75, 0.6], "V1A": [0.89, 0.43], "GT_after": [0.625, 0.403]}}
+granite {"RA": 4, "RA_arr": 3, "RA_after": 1, "V1A": 150, "PS": 112, "NA": 105, "NP": 62, "GT_after": 174} {"RC": 103, "RA": 313, "RA_arr": 277, "RA_after": 36, "V1A": 1729, "V1C": 97, "CD1": 240, "PS": 2957, "NA": 1258, "NP": 2254, "GT_after": 5211} {"F1": "not shown", "F2_after": "loses", "F2_arrival": "holds", "PD": {"B1": true, "B2": false, "B3": {"V1A": true, "GT_after": false, "RA": true}, "adopted": false}}
+EXIT 0

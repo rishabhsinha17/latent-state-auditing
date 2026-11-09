@@ -1,0 +1,12 @@
+qwen A seed 13
+qwen A seed 0
+qwen A seed 1
+qwen A seed 2
+qwen A {"S1": {"RC": [0.448], "RA_arr": [0.95, 0.506], "RA_after": [0.783, 0.694], "V1A": [0.9, 0.432], "GT_after": [0.89, 0.683]}, "CUR": {"RC": [0.2], "RA_arr": [0.945, 0.509], "RA_after": [0.514, 0.402], "V1A": [0.894, 0.426], "GT_after": [0.554, 0.277]}, "PD": {"RC": [0.216], "RA_arr": [0.913, 0.357], "RA_after": [0.667, 0.388], "V1A": [0.907, 0.331], "GT_after": [0.882, 0.325]}, "CUR-K": {"RC": [0.311], "RA_arr": [0.945, 0.509], "RA_after": [0.804, 0.701], "V1A": [0.894, 0.426], "GT_after": [0.888, 0.665]}, "PD-K": {"RC": [0.256], "RA_arr": [0.913, 0.357], "RA_after": [0.762, 0.489], "V1A": [0.907, 0.332], "GT_after": [0.93, 0.469]}}
+qwen D seed 13
+qwen D seed 0
+qwen D seed 1
+qwen D seed 2
+qwen D {"S1": {"RC": [0.454], "RA_arr": [0.958, 0.499], "RA_after": [0.752, 0.732], "V1A": [0.909, 0.435], "GT_after": [0.846, 0.659]}, "CUR": {"RC": [0.22], "RA_arr": [0.939, 0.496], "RA_after": [0.396, 0.386], "V1A": [0.865, 0.425], "GT_after": [0.502, 0.246]}, "PD": {"RC": [0.197], "RA_arr": [0.863, 0.326], "RA_after": [0.474, 0.279], "V1A": [0.832, 0.285], "GT_after": [0.771, 0.272]}}
+qwen {"RA": 201, "RA_arr": 95, "RA_after": 106, "V1A": 353, "PS": 539, "NA": 199, "NP": 285, "GT_after": 824} {"RC": 208, "RA": 745, "RA_arr": 270, "RA_after": 475, "V1A": 1729, "V1C": 97, "CD1": 240, "PS": 2958, "NA": 1258, "NP": 2260, "GT_after": 5218} {"F1": "holds", "F2_after": "loses", "F2_arrival": "holds", "PD": {"B1": false, "B2": false, "B3": {"V1A": false, "GT_after": false, "RA": false}, "adopted": false}}
+EXIT 0
